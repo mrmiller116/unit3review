@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Civil War: Unit 3 Study Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDF0F4; --surface:#FFFFFF; --surface-2:#F6F8FA; --ink:#1B2432; --muted:#556072;
+  --rule:#D3D9E1; --rule-strong:#9AA4B2; --blank-bg:#F1F4F8;
+  --blue:#24477A; --blue-tint:#E3EAF5; --gray:#6F7782; --gray-tint:#E4E6E9;
+  --brass:#8A5F12; --brass-tint:#F5EBD6; --on-brass:#FFFFFF; --on-accent:#FFFFFF;
+  --ok:#24754A; --ok-tint:#E1F2E7; --bad:#AE3B37; --bad-tint:#F9E3E1;
+  --water:#DCE6F0; --union-land:#C6D4EA; --csa-land:#C5C7CB; --neutral-land:#E6E3DC; --river:#2F6DB5;
+  --focus:#2F6DB5;
+  --freed:#EFD8A6; --freed-edge:#B8892B; --notfreed:#D3CBE8; --notfreed-edge:#6E5FAE; --ep-open:#FFFFFF; --ep-ctx:#E4E6E9;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top, 0px);
+  padding-bottom:env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#11151B; --surface:#1A2029; --surface-2:#212833; --ink:#E5E8EC; --muted:#A0A9B6;
+    --rule:#2E3643; --rule-strong:#5A657A; --blank-bg:#242C38;
+    --blue:#8DB0E6; --blue-tint:#1E2B40; --gray:#A7AEB8; --gray-tint:#2A313B;
+    --brass:#D9AE55; --brass-tint:#3A3020; --on-brass:#1A1406; --on-accent:#0F1620;
+    --ok:#63C08C; --ok-tint:#173225; --bad:#EE8580; --bad-tint:#3A1F1F;
+    --water:#18222E; --union-land:#2A3B55; --csa-land:#3B3E44; --neutral-land:#2C2A26; --river:#6FA8E8;
+    --focus:#8DB0E6;
+    --freed:#5A4721; --freed-edge:#D9AE55; --notfreed:#3E3860; --notfreed-edge:#A99BE0; --ep-open:#34425A; --ep-ctx:#222831;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#11151B; --surface:#1A2029; --surface-2:#212833; --ink:#E5E8EC; --muted:#A0A9B6;
+  --rule:#2E3643; --rule-strong:#5A657A; --blank-bg:#242C38;
+  --blue:#8DB0E6; --blue-tint:#1E2B40; --gray:#A7AEB8; --gray-tint:#2A313B;
+  --brass:#D9AE55; --brass-tint:#3A3020; --on-brass:#1A1406; --on-accent:#0F1620;
+  --ok:#63C08C; --ok-tint:#173225; --bad:#EE8580; --bad-tint:#3A1F1F;
+  --water:#18222E; --union-land:#2A3B55; --csa-land:#3B3E44; --neutral-land:#2C2A26; --river:#6FA8E8;
+  --focus:#8DB0E6;
+  --freed:#5A4721; --freed-edge:#D9AE55; --notfreed:#3E3860; --notfreed-edge:#A99BE0; --ep-open:#34425A; --ep-ctx:#222831;
+  color-scheme: dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top, 0px) + 120px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--surface)}
+h1,h2,h3{font-family:"Zilla Slab",Rockwell,"Roboto Slab",Georgia,serif;line-height:1.15;margin:0}
+p{margin:0}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+
+/* Top bar */
+.topbar{position:sticky;top:env(safe-area-inset-top, 0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--rule)}
+.topbar .wrap{display:flex;flex-direction:column;gap:8px;padding-top:10px;padding-bottom:10px}
+.tb-row{display:flex;align-items:center;gap:14px}
+.tb-title{font-family:"Zilla Slab",Rockwell,Georgia,serif;font-weight:600;font-size:1.05rem;white-space:nowrap}
+.meter{flex:1;height:8px;background:var(--gray-tint);border-radius:99px;overflow:hidden}
+.meter span{display:block;height:100%;width:0;background:var(--brass);transition:width .4s ease}
+.pct{font-size:.85rem;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -20px;padding:0 20px 2px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1px solid var(--rule);background:var(--surface-2);color:var(--ink);border-radius:99px;padding:5px 12px;font:inherit;font-size:.88rem;cursor:pointer;white-space:nowrap}
+.tab small{color:var(--muted);margin-left:6px;font-size:.8rem;font-variant-numeric:tabular-nums}
+.tab.complete{border-color:var(--ok)}
+.tab.complete small{color:var(--ok);font-weight:700}
+
+/* Hero */
+.hero{padding:44px 0 12px}
+.hero h1{font-size:clamp(2.7rem,8vw,4.4rem);font-weight:700;letter-spacing:-.01em}
+.hero .sub{display:block;font-family:"Atkinson Hyperlegible",system-ui,sans-serif;font-weight:400;font-size:1.05rem;color:var(--muted);margin-top:10px;letter-spacing:0}
+.divide{display:flex;height:10px;margin:24px 0 6px;border-radius:2px;overflow:hidden;max-width:440px}
+.divide i{flex:1}
+.divide i:first-child{background:var(--blue)}
+.divide i:last-child{background:var(--gray)}
+.divide-labels{display:flex;justify-content:space-between;max-width:440px;font-size:.82rem;color:var(--muted);margin-bottom:24px}
+.lede{font-size:1.2rem;max-width:34em}
+.how{display:grid;gap:8px;margin:20px 0 0;padding:0;list-style:none;max-width:40em}
+.how li{display:flex;gap:10px;align-items:flex-start}
+.swatch{flex:none;width:18px;height:18px;border-radius:4px;margin-top:4px;border:2px solid}
+.swatch.ok{background:var(--ok-tint);border-color:var(--ok)}
+.swatch.bad{background:var(--bad-tint);border-color:var(--bad);border-style:dashed}
+.swatch.hint{background:var(--brass-tint);border-color:var(--brass)}
+.ontest{margin-top:22px;padding:14px 16px;border-left:4px solid var(--brass);background:var(--surface);border-radius:0 8px 8px 0;max-width:40em;font-size:.98rem}
+.ontest strong{font-weight:700}
+
+/* Sections */
+section{padding:40px 0 8px;scroll-margin-top:120px}
+section > header h2{font-size:clamp(1.75rem,4.5vw,2.25rem);font-weight:700}
+section > header p{color:var(--muted);margin:6px 0 18px;max-width:40em}
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:20px 20px 18px;margin-bottom:16px}
+.panel h3{font-size:1.3rem;font-weight:600;margin-bottom:6px}
+.panel .intro{margin:0 0 14px;max-width:40em}
+.notes{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:.9rem;margin:0 0 12px}
+.notes svg{flex:none;width:16px;height:16px}
+
+/* Blanks */
+.fill-list{list-style:none;margin:0;padding:0}
+.fill-list li{margin:0 0 10px;line-height:2.15;padding-left:18px;position:relative}
+.fill-list li::before{content:"";position:absolute;left:2px;top:.95em;width:6px;height:6px;border-radius:50%;background:var(--rule-strong)}
+.blank-wrap{display:inline-flex;align-items:baseline;gap:4px;flex-wrap:wrap;max-width:100%;vertical-align:baseline}
+input.blank{font:inherit;color:var(--ink);background:var(--blank-bg);border:0;border-bottom:2px solid var(--rule-strong);border-radius:4px 4px 0 0;padding:1px 6px;text-align:center;max-width:100%;min-width:5ch;line-height:1.5}
+input.blank.ok{border-bottom-color:var(--ok);background:var(--ok-tint)}
+input.blank.bad{border-bottom-color:var(--bad);border-bottom-style:dashed;background:var(--bad-tint)}
+.hint{font-size:.8rem;color:var(--brass);background:var(--brass-tint);border-radius:4px;padding:0 6px;line-height:1.7;white-space:nowrap}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:12px}
+.btn{font:inherit;font-weight:700;font-size:.95rem;border:0;border-radius:8px;padding:9px 16px;background:var(--blue);color:var(--on-accent);cursor:pointer}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.ghost{background:transparent;color:var(--blue);border:1.5px solid var(--blue);padding:7px 14px}
+.status{font-size:.92rem;color:var(--muted)}
+.status.good{color:var(--ok);font-weight:700}
+.after{margin-top:12px;padding:10px 12px;background:var(--blue-tint);border-radius:8px;font-size:.95rem}
+
+/* Chain diagram */
+.chain{list-style:none;margin:0;padding:0;counter-reset:step}
+.chain li{position:relative;background:var(--surface-2);border:1px solid var(--rule);border-radius:10px;padding:10px 14px 10px 54px;line-height:2.15;margin-bottom:22px}
+.chain li::before{counter-increment:step;content:counter(step);position:absolute;left:12px;top:12px;width:28px;height:28px;border-radius:50%;background:var(--blue);color:var(--on-accent);font-weight:700;display:grid;place-items:center;line-height:1;font-size:.9rem}
+.chain li:not(:last-child)::after{content:"";position:absolute;left:25px;bottom:-23px;width:2px;height:22px;background:var(--rule-strong)}
+.chain li:last-child{margin-bottom:0}
+
+/* Map */
+.map-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--rule);background:var(--water)}
+.map-wrap svg{display:block;width:100%;min-width:600px;height:auto}
+.m-water{fill:var(--water)}
+.m-union{fill:var(--union-land);stroke:var(--rule-strong);stroke-width:1}
+.m-csa{fill:var(--csa-land);stroke:var(--rule-strong);stroke-width:1.2;stroke-linejoin:round}
+.m-neutral{fill:var(--neutral-land);stroke:var(--rule-strong);stroke-width:1}
+.m-river{fill:none;stroke:var(--river);stroke-width:4;stroke-linejoin:round;stroke-linecap:round}
+.m-block{fill:none;stroke:var(--blue);stroke-width:2.5;stroke-dasharray:9 6;stroke-linejoin:round}
+.m-march{fill:none;stroke:var(--bad);stroke-width:3}
+.m-arrowhead{fill:var(--bad)}
+.m-dot{fill:var(--ink);stroke:var(--surface);stroke-width:1.5}
+.m-label{fill:var(--ink);font:700 12.5px "Atkinson Hyperlegible",sans-serif;paint-order:stroke;stroke:var(--water);stroke-width:3px;stroke-linejoin:round}
+.m-state{fill:var(--muted);font:700 11px "Atkinson Hyperlegible",sans-serif;letter-spacing:.08em}
+.m-sea{fill:var(--muted);font:italic 500 15px "Zilla Slab",Georgia,serif}
+.m-badge circle{fill:var(--brass);stroke:var(--surface);stroke-width:2}
+.m-badge text{fill:var(--on-brass);font:700 13px "Atkinson Hyperlegible",sans-serif;text-anchor:middle;dominant-baseline:central}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.85rem;color:var(--muted);margin:10px 0 16px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{display:inline-block;width:18px;height:12px;border-radius:2px;border:1px solid var(--rule-strong)}
+.legend i.line{height:0;border:0;border-top:4px solid var(--river);border-radius:0}
+.legend i.arrow{height:0;border:0;border-top:3px solid var(--bad);border-radius:0}
+.map-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.map-list li{display:flex;gap:10px;align-items:baseline;line-height:2.15}
+.num{flex:none;display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--brass);color:var(--on-brass);font-weight:700;font-size:.85rem;line-height:1;transform:translateY(6px)}
+
+/* Emancipation map sort */
+.ep-wrap svg{min-width:680px}
+.ep-ctx path{fill:var(--ep-ctx);stroke:var(--rule-strong);stroke-width:.8;stroke-linejoin:round}
+.ep-ctx-labels{pointer-events:none}
+.ep-ctx-labels text{font:400 10.5px "Atkinson Hyperlegible",sans-serif;fill:var(--muted);text-anchor:middle;dominant-baseline:central}
+.ep-ctx-labels line{stroke:var(--muted);stroke-width:.8}
+.ep-ctx-labels circle{fill:var(--muted)}
+.ep-land{fill:var(--gray-tint);stroke:var(--rule-strong);stroke-width:.8}
+.ep-st{cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;outline:none}
+.ep-st path,.ep-st .ep-pill{fill:var(--ep-open);stroke:var(--ink);stroke-width:1.2;stroke-linejoin:round;transition:fill .15s}
+.ep-st:hover path,.ep-st:hover .ep-pill{stroke:var(--brass);stroke-width:2.2}
+.ep-st text{font:700 14px "Atkinson Hyperlegible",sans-serif;text-anchor:middle;dominant-baseline:central;fill:var(--ink);paint-order:stroke;stroke:var(--surface);stroke-width:3px;stroke-linejoin:round}
+.ep-st line{stroke:var(--ink);stroke-width:1.2}
+.ep-st .ep-tip{fill:var(--ink);stroke:none}
+.ep-st.z-freed path,.ep-st.z-freed .ep-pill{fill:var(--freed)}
+.ep-st.z-not path,.ep-st.z-not .ep-pill{fill:var(--notfreed)}
+.ep-st.ok path,.ep-st.ok .ep-pill{stroke:var(--ok);stroke-width:2.5}
+.ep-st.bad path,.ep-st.bad .ep-pill{stroke:var(--bad);stroke-width:2.5;stroke-dasharray:5 3}
+.ep-st.sel path,.ep-st.sel .ep-pill{stroke:var(--brass);stroke-width:3.2;stroke-dasharray:none}
+.ep-st:focus-visible path,.ep-st:focus-visible .ep-pill{stroke:var(--focus);stroke-width:3.2}
+.ep-st.dragging{opacity:.5}
+.ep-cap{font-size:.88rem;color:var(--muted);margin:8px 0 12px}
+.ep-zones{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ep-zone{border:1px solid var(--rule);border-top:6px solid var(--rule-strong);border-radius:8px;padding:10px 12px 12px;background:var(--surface);min-height:120px;transition:background .15s}
+.ep-zone.z-freed{border-top-color:var(--freed-edge)}
+.ep-zone.z-not{border-top-color:var(--notfreed-edge)}
+.ep-zone.over{background:var(--brass-tint);outline:2px dashed var(--brass);outline-offset:-2px}
+#ep-panel.has-sel .ep-zone{cursor:pointer}
+#ep-panel.has-sel .ep-zone .place{visibility:visible}
+.ep-zone .zone-head > span:first-child{display:inline-flex;align-items:center;gap:8px}
+.ep-sw{display:inline-block;width:14px;height:14px;border-radius:3px;border:1px solid var(--rule-strong)}
+.z-freed .ep-sw{background:var(--freed)}
+.z-not .ep-sw{background:var(--notfreed)}
+.ep-empty{font-size:.85rem;color:var(--muted);align-self:center}
+.ep-chip{font:inherit;font-size:.92rem;line-height:1.35;background:var(--surface);color:var(--ink);border:1.5px solid var(--rule-strong);border-radius:6px;padding:6px 10px;cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none}
+.ep-chip[aria-pressed="true"]{border-color:var(--brass);background:var(--brass-tint);box-shadow:0 0 0 2px var(--brass)}
+.ep-chip.ok{border-color:var(--ok);background:var(--ok-tint)}
+.ep-chip.ok::before{content:"✓ ";color:var(--ok);font-weight:700}
+.ep-chip.bad{border-color:var(--bad);border-style:dashed;background:var(--bad-tint)}
+.ep-ghost{position:fixed;left:0;top:0;z-index:50;pointer-events:none;background:var(--ink);color:var(--surface);font-weight:700;font-size:.92rem;padding:6px 12px;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.25);white-space:nowrap}
+body.ep-dragging{cursor:grabbing;-webkit-user-select:none;user-select:none}
+.ep-st,.ep-zone,.ep-chip{-webkit-tap-highlight-color:transparent}
+@media (max-width:480px){.ep-zones{gap:8px}.ep-zone{padding:8px}}
+
+/* Timeline */
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:flex;align-items:center;gap:12px;padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--surface-2);margin-bottom:8px}
+.tl .pos{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.85rem;background:var(--gray-tint);color:var(--ink);line-height:1}
+.tl .ev{flex:1;line-height:1.35}
+.tl .date{display:block;font-size:.82rem;color:var(--muted)}
+.tl .mv{display:flex;gap:6px}
+.icon-btn{width:38px;height:38px;border-radius:6px;border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink);cursor:pointer;display:grid;place-items:center;padding:0}
+.icon-btn svg{width:16px;height:16px}
+.icon-btn:disabled{opacity:.3;cursor:not-allowed}
+.tl li.ok{border-color:var(--ok);background:var(--ok-tint)}
+.tl li.ok .pos{background:var(--ok);color:var(--on-accent)}
+.tl li.bad{border-color:var(--bad);border-style:dashed;background:var(--bad-tint)}
+
+/* Sorting */
+.sort-bank{background:var(--surface-2);border:1.5px dashed var(--rule-strong);border-radius:10px;padding:12px;margin-bottom:12px}
+.zone{cursor:default}
+.sort.has-sel .zone{cursor:pointer}
+.zone-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;width:100%;font:inherit;font-weight:700;background:none;border:0;color:inherit;padding:0 0 8px;cursor:inherit;text-align:left}
+.zone-head .place{font-weight:400;font-size:.8rem;color:var(--blue);visibility:hidden}
+.sort.has-sel .zone-head .place{visibility:visible}
+.cards{display:flex;flex-wrap:wrap;gap:8px;min-height:38px}
+.card{font:inherit;font-size:.92rem;line-height:1.35;background:var(--surface);color:var(--ink);border:1.5px solid var(--rule-strong);border-radius:6px;padding:6px 10px;cursor:pointer;text-align:left}
+.card[aria-pressed="true"]{border-color:var(--brass);background:var(--brass-tint);box-shadow:0 0 0 2px var(--brass)}
+.card.ok{border-color:var(--ok);background:var(--ok-tint)}
+.card.ok::before{content:"✓ ";color:var(--ok);font-weight:700}
+.card.bad{border-color:var(--bad);border-style:dashed;background:var(--bad-tint)}
+.boxes{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{border:1px solid var(--rule);border-top:5px solid var(--rule-strong);border-radius:8px;padding:10px 12px 12px;background:var(--surface);min-height:96px}
+.box.tone-blue{border-top-color:var(--blue)}
+.box.tone-gray{border-top-color:var(--gray)}
+.box.tone-brass{border-top-color:var(--brass)}
+.sort.has-sel .box:hover,.sort.has-sel .sort-bank:hover{background:var(--brass-tint)}
+@media (max-width:600px){.boxes{grid-template-columns:1fr}}
+
+/* Matching */
+.match{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.match li{display:grid;grid-template-columns:1fr minmax(190px,250px);gap:8px 14px;align-items:center;padding:10px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface-2)}
+.match select{font:inherit;font-size:.95rem;padding:7px 8px;border-radius:6px;border:1.5px solid var(--rule-strong);background:var(--surface);color:var(--ink);width:100%}
+.match li.ok{border-color:var(--ok);background:var(--ok-tint)}
+.match li.bad{border-color:var(--bad);border-style:dashed;background:var(--bad-tint)}
+@media (max-width:560px){.match li{grid-template-columns:1fr}}
+
+/* Vocabulary */
+.vocab{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.vcard{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.vcard.got{border-color:var(--ok);box-shadow:inset 0 3px 0 var(--ok)}
+.vcard h3{font-size:1.2rem;font-weight:600}
+textarea{font:inherit;font-size:.95rem;line-height:1.45;width:100%;min-height:78px;resize:vertical;border:1.5px solid var(--rule-strong);border-radius:6px;padding:8px 10px;background:var(--blank-bg);color:var(--ink)}
+.def{border-left:4px solid var(--blue);padding:6px 10px;background:var(--blue-tint);border-radius:0 6px 6px 0;font-size:.95rem}
+.self{display:flex;gap:8px;flex-wrap:wrap}
+.chip-btn{font:inherit;font-size:.86rem;border-radius:99px;padding:5px 12px;border:1.5px solid var(--rule-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip-btn.got[aria-pressed="true"]{border-color:var(--ok);background:var(--ok-tint);font-weight:700}
+.chip-btn.review[aria-pressed="true"]{border-color:var(--brass);background:var(--brass-tint);font-weight:700}
+
+/* Short answer */
+.sa h3{font-size:1.15rem;font-weight:600;line-height:1.3}
+.sa textarea{min-height:112px;margin-top:2px}
+.wc{font-size:.82rem;color:var(--muted)}
+.checklist{padding:12px 14px;margin:12px 0 0;background:var(--surface-2);border:1px solid var(--rule);border-radius:8px}
+.checklist > p{margin:0 0 6px;font-weight:700}
+.checklist .tip{font-weight:400;font-size:.88rem;color:var(--muted);margin:6px 0 0}
+.checklist label{display:flex;gap:10px;align-items:flex-start;padding:4px 0;cursor:pointer}
+.checklist input{flex:none;margin-top:4px;width:18px;height:18px;accent-color:var(--ok)}
+.panel.done{border-color:var(--ok);box-shadow:inset 4px 0 0 var(--ok)}
+.qnum{color:var(--muted);font-weight:500;margin-right:4px}
+
+footer{padding:36px 0 56px;color:var(--muted);font-size:.9rem;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.reset{font:inherit;font-size:.9rem;background:none;border:1.5px solid var(--rule-strong);color:var(--ink);border-radius:8px;padding:7px 14px;cursor:pointer}
+.reset.armed{border-color:var(--bad);color:var(--bad);font-weight:700}
+
+@media (max-width:520px){
+  .wrap{padding:0 14px}
+  .tabs{margin:0 -14px;padding:0 14px 2px}
+  .panel{padding:16px 14px}
+  .tb-title{display:none}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-row">
+      <span class="tb-title">Civil War study guide</span>
+      <div class="meter" id="meter" aria-hidden="true"><span></span></div>
+      <span class="pct" id="pct">0% complete</span>
+    </div>
+    <nav class="tabs" aria-label="Sections">
+      <button class="tab" data-action="nav" data-target="concepts">Key concepts<small>0/0</small></button>
+      <button class="tab" data-action="nav" data-target="diagrams">Chronology and Spatial Reasoning<small>0/0</small></button>
+      <button class="tab" data-action="nav" data-target="matching">Matching<small>0/0</small></button>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>The Civil War<span class="sub">Unit 3 study guide, 1860–1865</span></h1>
+    <div class="divide" aria-hidden="true"><i></i><i></i></div>
+    <div class="divide-labels" aria-hidden="true"><span>Union</span><span>Confederacy</span></div>
+    <p class="lede">Every answer in this guide is in your notes. Keep them open next to you. When you get stuck, each section tells you which notes to check.</p>
+    <ul class="how">
+      <li><span class="swatch ok" aria-hidden="true"></span><span>Green means correct.</span></li>
+      <li><span class="swatch bad" aria-hidden="true"></span><span>Red means check your notes and try again.</span></li>
+      <li><span class="swatch hint" aria-hidden="true"></span><span>Miss a blank twice and you’ll get its first letter as a hint.</span></li>
+    </ul>
+  </div>
+
+  <section id="concepts">
+    <header>
+      <h2>Key concepts</h2>
+      <p>Fill in each blank from your notes, then check your answers.</p>
+    </header>
+    <div id="concepts-body"></div>
+  </section>
+
+  <section id="diagrams">
+    <header>
+      <h2>Chronology and Spatial Reasoning</h2>
+      <p>Four visuals that cover the whole unit. Use your notes to fill in, label, and sort.</p>
+    </header>
+
+    <div class="panel">
+      <h3>Road to war, 1860–1861</h3>
+      <div class="notes-slot" data-notes="the election of 1860, secession, and Fort Sumter"></div>
+      <p class="intro">Fill in the chain of events that led to the first shots.</p>
+      <ol class="chain" id="chain"></ol>
+      <div class="actions"><button class="btn" data-action="check-blanks">Check answers</button><p class="status" role="status" aria-live="polite"></p></div>
+    </div>
+
+    <div class="panel">
+      <h3>Map: where it happened</h3>
+      <div class="notes-slot" data-notes="major battles, the blockade, and Sherman’s March"></div>
+      <p class="intro">Label each numbered spot. The stars and city names are there to help you find your way.</p>
+      <div class="map-wrap">
+        <svg viewBox="0 0 750 520" role="img" aria-labelledby="mapTitle mapDesc">
+          <title id="mapTitle">Simplified map of the eastern United States during the Civil War</title>
+          <desc id="mapDesc">Union states are shaded blue and Confederate states gray. A river runs north to south, a dashed line follows the Southern coast, and seven numbered markers show places to label below the map.</desc>
+          <defs>
+            <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="m-arrowhead"/></marker>
+          </defs>
+          <rect class="m-water" x="0" y="0" width="750" height="520"/>
+          <polygon class="m-union" points="0,0 750,0 750,82 650,110 627,152 600,200 612,245 552,270 502,305 472,325 465,367 478,420 495,480 475,495 455,470 437,425 425,395 387,375 320,365 300,365 275,372 268,398 250,385 200,385 130,392 70,430 65,475 60,520 0,520"/>
+          <polygon class="m-neutral" points="65,475 60,520 0,520 0,412"/>
+          <polygon class="m-csa" points="0,262 137,285 135,212 262,212 407,210 457,198 495,185 530,165 557,142 574,152 592,175 600,200 612,245 552,270 502,305 472,325 465,367 478,420 495,480 475,495 455,470 437,425 425,395 387,375 320,365 300,365 275,372 268,398 250,385 200,385 130,392 70,430 65,475 0,412"/>
+
+          <text class="m-sea" x="640" y="390" text-anchor="middle">Atlantic Ocean</text>
+          <text class="m-sea" x="320" y="462" text-anchor="middle">Gulf of Mexico</text>
+          <text class="m-state" x="14" y="505">MEXICO</text>
+          <text class="m-state" x="62" y="345" text-anchor="middle">TEXAS</text>
+          <text class="m-state" x="190" y="252" text-anchor="middle">ARKANSAS</text>
+          <text class="m-state" x="172" y="352" text-anchor="middle">LOUISIANA</text>
+          <text class="m-state" x="352" y="328" text-anchor="middle">GEORGIA</text>
+          <text class="m-state" x="545" y="92" text-anchor="middle">PENNSYLVANIA</text>
+
+          <polyline class="m-river" points="188,0 225,75 245,160 270,200 258,225 250,247 240,285 228,316 222,340 220,364 247,375 268,398"/>
+          <polyline class="m-block" points="628,195 634,248 568,287 516,322 486,342 480,368 493,420 511,483 482,512 440,484 422,434 410,410 384,392 320,381 296,383 282,414 250,401 200,401 134,408 84,442 78,480"/>
+          <path class="m-march" d="M392,284 Q434,292 464,318" marker-end="url(#arrowhead)"/>
+
+          <!-- reference cities -->
+          <path class="m-dot" d="M574,144 l2.4,5.2 5.6,.6 -4.2,3.8 1.2,5.5 -5,-2.9 -5,2.9 1.2,-5.5 -4.2,-3.8 5.6,-.6z"/>
+          <text class="m-label" x="586" y="152">Washington, D.C.</text>
+          <path class="m-dot" d="M564,178 l2.4,5.2 5.6,.6 -4.2,3.8 1.2,5.5 -5,-2.9 -5,2.9 1.2,-5.5 -4.2,-3.8 5.6,-.6z"/>
+          <text class="m-label" x="576" y="194">Richmond</text>
+          <circle class="m-dot" cx="472" cy="322" r="4.5"/>
+          <text class="m-label" x="462" y="343" text-anchor="end">Savannah</text>
+          <text class="m-label" x="513" y="301">Charleston</text>
+
+          <!-- places to label -->
+          <circle class="m-dot" cx="228" cy="316" r="5.5"/>
+          <circle class="m-dot" cx="502" cy="305" r="5.5"/>
+          <circle class="m-dot" cx="390" cy="281" r="5.5"/>
+          <circle class="m-dot" cx="569" cy="129" r="5.5"/>
+          <circle class="m-dot" cx="529" cy="190" r="5.5"/>
+
+          <g class="m-badge"><circle cx="216" cy="138" r="12"/><text x="216" y="138">1</text></g>
+          <g class="m-badge"><circle cx="203" cy="299" r="12"/><text x="203" y="299">2</text></g>
+          <g class="m-badge"><circle cx="604" cy="292" r="12"/><text x="604" y="292">3</text></g>
+          <g class="m-badge"><circle cx="487" cy="285" r="12"/><text x="487" y="285">4</text></g>
+          <g class="m-badge"><circle cx="370" cy="262" r="12"/><text x="370" y="262">5</text></g>
+          <g class="m-badge"><circle cx="549" cy="114" r="12"/><text x="549" y="114">6</text></g>
+          <g class="m-badge"><circle cx="510" cy="209" r="12"/><text x="510" y="209">7</text></g>
+        </svg>
+      </div>
+      <div class="legend" aria-hidden="true">
+        <span><i style="background:var(--union-land)"></i>Union states</span>
+        <span><i style="background:var(--csa-land)"></i>Confederate states</span>
+        <span><i class="line"></i>River</span>
+        <span><i class="arrow"></i>Sherman’s March</span>
+        <span>Simplified map, not to scale</span>
+      </div>
+      <ul class="map-list" id="maplist"></ul>
+      <div class="actions"><button class="btn" data-action="check-blanks">Check labels</button><p class="status" role="status" aria-live="polite"></p></div>
+    </div>
+
+    <div class="panel">
+      <h3>North vs. South</h3>
+      <div class="notes-slot" data-notes="North vs. South strengths and weaknesses"></div>
+      <p class="intro">Tap a card, then tap the box where it belongs. On the test you’ll list two in each box from memory, so say them out loud as you sort.</p>
+      <div class="sort" data-group="ns"></div>
+    </div>
+
+    <div class="panel" id="ep-panel">
+      <h3>Who did the Emancipation Proclamation free?</h3>
+      <div class="notes-slot" data-notes="the Emancipation Proclamation"></div>
+      <p class="intro">The ten states with bold names allowed slavery in 1863. Drag each one to Freed or Not Freed. You can also tap a state, then tap a box.</p>
+      <div class="map-wrap ep-wrap">
+<svg id="epmap" viewBox="10 5 1020 610" role="group" aria-label="Map of the United States with ten states to sort">
+<rect class="m-water" x="10" y="5" width="1020" height="610"/>
+<text class="m-sea" x="62" y="470" text-anchor="middle">Pacific</text><text class="m-sea" x="62" y="488" text-anchor="middle">Ocean</text>
+<text class="m-sea" x="935" y="420" text-anchor="middle">Atlantic Ocean</text>
+<text class="m-sea" x="610" y="588" text-anchor="middle">Gulf of Mexico</text>
+<g class="ep-ctx">
+<path d="M145,407L149,407L150.5,404L150,401L147.5,400L148.5,395L148,391.5L150,391.5L152.5,389L153.5,386L154,380.5L157,377L160,376L163,373.5L160,369.5L158.5,363L156,359L157,356L158.5,353L158,345L159,342.5L159,338L160,331L163,330.5L166.5,331.5L168.5,335L170,335L172.5,331.5L176,313.5L202.5,318L239.5,324.5L264.5,328L251.5,423.5L247,456.5L208,450.5L171.5,429.5L142.5,411.5L143,409Z"/>
+<path d="M277,237L301,240.5L333,244L361.5,246.5L395.5,249L394,272L389.5,340.5L372.5,339.5L348.5,337.5L315.5,334.5L279,330L264.5,328L268.5,301.5L268.5,299L271,279.5Z"/>
+<path d="M814.5,594.5L814.5,594.5L814.5,594.5ZM812.5,596L812.5,596L812.5,596ZM807.5,599L807.5,599L807.5,599ZM793.5,604L795,602L800.5,597.5L805,600L796.5,604ZM789.5,605.5L789.5,605.5L789.5,605.5ZM786.5,605.5L786.5,605.5L786.5,605.5ZM777.5,558.5L777.5,558.5L777.5,558.5ZM770.5,606L770.5,606L770.5,606ZM720.5,495L720.5,495L720.5,495ZM711,469L714,475L766,471.5L767.5,476L769.5,475.5L770,471L768.5,466L770,465L774.5,466L780,466L783,475.5L787,486.5L795,499.5L806,513.5L805,517L806.5,522L811.5,529L815.5,537L820,544.5L822,549L823,554L824,574.5L822,573.5L821,579.5L822.5,582.5L821.5,586.5L819,589.5L819.5,586L817.5,586L813.5,588L807,589.5L804.5,587.5L805.5,585L800.5,578L798.5,576L793,574L792,575.5L789,570.5L787.5,566L785.5,563.5L782,561.5L780,559.5L781.5,555.5L780.5,552L778.5,553L779.5,556L777.5,557L772.5,551L769.5,546L766.5,543L771,533L764.5,530L764,531.5L767.5,534.5L767,537L764.5,537L762,533.5L762,527.5L763.5,520.5L763.5,517L761.5,511.5L762,510L759,505L755,505L754,506L753,503L751.5,503L750,500L746,498.5L745.5,495L743,494L740.5,490.5L732,486.5L727.5,487.5L726,489.5L726.5,492L722.5,492.5L716.5,497.5L712,498L713.5,501L710,499L707.5,500L708,496.5L705.5,493.5L696,488.5L689,486L680.5,486L668,488.5L663.5,490L666.5,486.5L664.5,484.5L665,481L660.5,477L660.5,474L693.5,471Z"/>
+<path d="M640.5,230L642,231L647,230.5L652,227.5L669,226L685.5,224L686,225.5L688.5,247.5L692.5,284.5L691.5,285.5L693.5,291.5L690.5,292L687.5,294.5L685,293.5L682.5,295L683.5,298L680.5,301L680,303.5L677,305L675.5,311.5L674,313L670,310.5L668.5,309L665.5,311.5L666,314.5L662.5,315.5L661,313.5L656.5,315.5L655.5,318.5L650.5,315.5L648.5,316.5L646.5,315L646.5,318.5L645.5,317L639.5,319.5L638,317.5L640.5,312L639.5,310.5L641.5,308.5L644.5,303L645,300L646.5,298.5L646,292.5L643.5,288L645,283.5Z"/>
+<path d="M394,272L422.5,273.5L443.5,274.5L465,275L495.5,275L510,275L511.5,277.5L516.5,277.5L517.5,281.5L516,281L513.5,286L516.5,289L518.5,293L522.5,295L523,344L489,344L459,343.5L432.5,342.5L389.5,340.5Z"/>
+<path d="M940,115L940,115L940,115ZM938,116L938,116L938,116ZM936.5,112L936.5,112L936.5,112ZM932,116L932,116L932,116ZM933.5,124.5L933.5,124.5L933.5,124.5ZM931.5,119L932.5,117L934.5,119.5ZM930,116.5L930,116.5L930,116.5ZM910,150L908,149L907.5,147L904.5,145L895,114.5L891,102.5L892,101L895,103L894.5,99.5L897.5,99L895,96.5L897,92.5L899,90L898,89L900,86L898,82.5L898,76.5L900,74L899,67.5L906,47.5L909,47.5L910,51.5L912.5,52.5L916.5,48.5L919.5,47.5L919.5,46L922.5,46L929.5,50L937.5,74L938.5,80L944.5,80L944.5,82.5L946.5,84.5L946,87L949.5,89.5L952,88L957,95L955,99.5L953,98.5L950,105.5L947,104.5L946.5,107.5L944,108.5L944,110.5L941.5,109.5L941.5,112.5L939,113.5L937.5,109.5L935.5,111.5L937,115L935.5,117.5L934.5,114.5L932,114.5L931,110L929.5,114L929.5,120.5L930,123L926,125.5L924.5,128L921.5,129L919.5,132L918,131L915,134L915,137L913,138.5L913,142.5L911,143.5Z"/>
+<path d="M927.5,187L933,186L930.5,187.5ZM918.5,188.5L921.5,184.5L924.5,186.5ZM871,167.5L884,165L903,160.5L906,156L909.5,155L911,158.5L914.5,158.5L909.5,166L910,168.5L912,167.5L917,171L917.5,174L919.5,174.5L921.5,177.5L925,177.5L929,175L928.5,171.5L931,177L924.5,180L922.5,182.5L920,183.5L918,179.5L917.5,181.5L915.5,183L915.5,185.5L913,186.5L910.5,183L910,182L907.5,181L905.5,176L899,178L898.5,177.5L871,184L870.5,183Z"/>
+<path d="M479.5,70.5L511,71L510.5,62L513.5,62.5L515.5,64L518,73.5L518,75.5L520,77.5L524.5,77.5L525,78.5L530.5,79L531.5,81.5L536.5,80.5L540.5,78L543.5,78.5L547.5,80.5L548,82L551,82L553.5,87.5L555,84L558,84L559,86L563.5,87.5L566,90.5L570.5,89.5L574.5,86.5L576.5,86L578,89L587.5,88L592,90.5L593.5,89.5L596,90.5L590.5,94L582,97.5L579,99.5L572.5,105.5L570,109.5L565.5,114L559,119.5L560,121L559,120L556,122.5L556.5,135.5L555.5,137L551,139L547.5,144L547.5,147.5L549.5,147.5L551.5,150L549.5,153.5L550,161.5L549.5,166L553.5,170L557,170L559,172.5L564,175L565,178L570,181.5L572.5,182L575.5,187L575.5,190.5L576.5,193.5L549.5,194.5L516,195L490.5,195L491,154.5L487,151.5L484.5,147.5L489,142.5L489,140L488.5,131L486.5,127.5L485.5,123.5L486,118L485.5,116.5L485,102.5L480.5,89.5L481,87L480.5,81L481.5,77.5Z"/>
+<path d="M849,246L849.5,244.5L851,241.5L855,238.5L855,237L860.5,231L854,226.5L853,223.5L850.5,223.5L850,221L851.5,216L849.5,214L853,208.5L853,206L855,204L870,209L869,216.5L869,217L867,218.5L866.5,221.5L871.5,222.5L872.5,225L873,237.5L870,247.5L867,251L865.5,257L862.5,259L863,254L860.5,253L858.5,254.5L851.5,250L849.5,246.5Z"/>
+<path d="M864.5,329L864.5,329L864.5,329ZM863.5,349.5L863.5,348.5L871,343L871.5,344L867,346ZM755.5,334L780.5,331L812,325.5L840.5,320L859,316L860.5,320L865.5,328.5L864,327.5L859.5,319L856,317.5L858.5,320.5L862,325.5L859.5,323L858,324.5L854.5,323L857.5,325.5L853.5,327.5L851,330L847,330.5L847.5,332.5L852,330.5L853,331.5L856,329.5L859,330L858.5,332.5L860.5,336L860,329.5L863.5,329.5L865.5,334.5L865,337.5L863,338L859.5,344.5L853.5,344.5L851,342L851.5,344.5L843,343.5L854,347L852.5,352L849.5,355L846,353.5L846,354.5L850.5,356L855,353L859,353.5L857,356L856,360.5L862.5,349.5L863,350L858,357.5L856,362.5L855.5,361L851.5,361L844,364.5L838,370.5L834.5,376.5L833.5,384L829,383.5L823,386L798,368.5L777.5,371.5L777.5,369L774,365.5L772.5,367L772,364.5L749.5,367L745.5,368L735,373.5L725.5,375L712.5,377L712.5,371.5L717.5,369L717.5,366L721,362.5L726.5,361.5L733,355.5L734.5,356L738,350L740,348.5L741,350.5L743.5,349L744,347L747,345L750.5,345.5L752.5,341L755,338Z"/>
+<path d="M377,65.5L404.5,68L421,69L445,70L479.5,70.5L481.5,77.5L480.5,81L481,87L480.5,89.5L485,102.5L485.5,116.5L486,118L485.5,123.5L486.5,127.5L488.5,131L489,140L460,139.5L443,139L412.5,137.5L392,136L371,134.5Z"/>
+<path d="M372.5,339.5L389.5,340.5L432.5,342.5L459,343.5L489,344L523,344L523,355.5L527,380.5L526.5,420.5L519.5,418.5L517.5,415.5L512.5,413.5L511.5,415.5L506.5,415.5L506,414L501,416.5L499,415L493,418L491.5,420L490,418L485.5,414.5L484,416.5L481,414L476,418.5L475.5,414.5L472.5,416.5L470.5,414.5L466.5,412.5L463,416L461,414.5L461.5,412.5L459,412L457.5,409.5L454,408.5L451.5,410.5L450,408.5L446.5,409L442.5,407L438.5,407L438.5,404L435.5,401L435,403L431.5,402L429.5,402.5L426,398.5L424,398.5L426,354L396.5,352.5L371.5,351Z"/>
+<path d="M756,209L759,207L767.5,200.5L768.5,206.5L800.5,200.5L825,195.5L841,192L843,195L844.5,194.5L847,196.5L849.5,202.5L854,202.5L855,204L853,206L853,208.5L849.5,214L851.5,216L850,221L850.5,223.5L853,223.5L854,226.5L860.5,231L855,237L855,238.5L851,241.5L846.5,242L845,244.5L816.5,250.5L782.5,257L764.5,260L761,239Z"/>
+<path d="M369,155.5L369.5,155.5L371,134.5L392,136L412.5,137.5L443,139L460,139.5L489,140L489,142.5L484.5,147.5L487,151.5L491,154.5L490.5,195L488,195L489.5,198L488.5,200L491,204L489.5,205.5L489,210L487.5,212L490.5,218.5L488,218L486.5,214.5L482,212L479.5,212L476.5,209.5L470.5,210L467,209.5L465.5,211.5L457.5,207.5L457,206L434,205.5L404,204L365.5,201Z"/>
+<path d="M369,155.5L365.5,201L361.5,246.5L333,244L301,240.5L277,237L252.5,233.5L243.5,232L247,209.5L256,154L258,142L263.5,143L298.5,148L339,153L339.5,153Z"/>
+<path d="M871,184L898.5,177.5L899,178L902,191L901.5,193.5L900,193.5L893.5,197L884.5,198.5L882,202.5L878,204.5L874,208.5L872.5,206L875.5,202.5L874,201Z"/>
+<path d="M733,295L738,293.5L738,290.5L739.5,290L738.5,285.5L741.5,279.5L744,282.5L746,281.5L744.5,278L746.5,273L748,273L750,269.5L751.5,270.5L753.5,269.5L758,263.5L760,256L759.5,252.5L761,246.5L760.5,243L759,241L761,239L764.5,260L782.5,257L784,268.5L787,266L789.5,261.5L792.5,261.5L794.5,257.5L797,258.5L800.5,258.5L802,255L804.5,253.5L807.5,255L811,254.5L810.5,256.5L814,260.5L813,265L802.5,259L803,266L796.5,276.5L794,275L791.5,283L790.5,286L787.5,285.5L784,283L783.5,286.5L780.5,294L780,297.5L777,302L776,305L777.5,306.5L776.5,309.5L774,311.5L773,310.5L769,313.5L767,312.5L766.5,315.5L761.5,318L758.5,316L755.5,319.5L753.5,320L750,318.5L747,314.5L747,313L744.5,313L741,311L739.5,308.5L736.5,305.5L734,301.5Z"/>
+<path d="M576.5,264.5L577.5,259.5L581,258L581.5,254.5L583.5,252L583.5,248L580.5,244.5L581.5,241L588,239.5L593,236L593.5,232.5L595.5,231L595.5,224L591.5,221.5L590,218L587,215.5L618,213.5L634,212.5L634,217L637,222L640.5,230L645,283.5L643.5,288L646,292.5L646.5,298.5L645,300L644.5,303L641.5,308.5L639.5,310.5L640.5,312L638,317.5L639.5,319.5L637.5,323L639,327.5L632,330L631.5,332L633.5,335L631.5,337L624.5,334L620.5,337.5L621,340L619,338L618.5,340L614,333.5L615,332L613.5,328L614,326.5L612,324L607,319.5L606,320.5L597.5,313L597.5,309.5L600,303L599.5,301.5L601,298.5L595,296L593.5,298.5L591.5,297.5L589.5,290L584,285.5L583,283.5L578,279.5L575.5,272.5L575,268Z"/>
+<path d="M264.5,328L279,330L315.5,334.5L348.5,337.5L372.5,339.5L371.5,351L371,350.5L366.5,407.5L364.5,429.5L363,453.5L338.5,451.5L318,449.5L295,447L294.5,449.5L296.5,452L264,448L263,458.5L247,456.5L251.5,423.5Z"/>
+<path d="M77,374.5L81,377L81.5,379.5L79,378.5L79,376ZM74.5,384L78.5,390L76,388.5ZM65,358.5L65,358.5L65,358.5ZM58.5,374.5L58.5,374.5L58.5,374.5ZM56.5,355L62.5,358.5L57,357.5ZM50.5,355L54,355.5L55,358L52,358ZM47,353.5L47,353.5L47,353.5ZM32.5,160L46.5,164L62,168.5L83.5,175L100.5,179L83.5,245.5L157,356L156,359L158.5,363L160,369.5L163,373.5L160,376L157,377L154,380.5L153.5,386L152.5,389L150,391.5L148,391.5L148.5,395L147.5,400L150,401L150.5,404L149,407L145,407L99.5,401.5L99.5,399.5L98,398L99,393.5L98.5,387.5L96.5,382.5L92.5,376.5L86.5,370L84.5,371L82,369.5L83,367L81.5,362.5L76.5,362L69.5,356.5L69.5,354L65,349.5L59.5,348L55,345L49,344.5L46.5,340.5L48.5,335L48,333L50,328L46,324.5L47.5,321L45.5,319.5L43.5,314.5L41.5,313.5L37,299.5L35,296L35,292L36.5,289L38,289L39.5,286L38.5,281.5L35,281L31.5,274.5L32.5,270.5L31.5,266.5L33.5,261L35.5,260.5L34.5,265.5L38.5,270L38.5,265L36.5,261.5L37.5,259L36,257L39,256.5L37.5,253.5L35.5,253.5L35.5,256.5L33,260L29.5,254.5L26,253.5L28.5,250.5L27,243L24.5,239.5L23,235.5L20,229L21.5,227L21.5,219.5L23.5,215.5L24,209L21.5,202L18.5,197L19,193L26.5,184L27.5,179L31.5,173L31.5,166L30.5,164.5Z"/>
+<path d="M826,267L827,265.5L829.5,267L828,270Z"/>
+<path d="M490.5,195L516,195L549.5,194.5L576.5,193.5L576.5,196.5L579,198.5L577.5,201.5L578,207L580,210.5L585.5,212.5L587,215.5L590,218L591.5,221.5L595.5,224L595.5,231L593.5,232.5L593,236L588,239.5L581.5,241L580.5,244.5L583.5,248L583.5,252L581.5,254.5L581,258L577.5,259.5L576.5,264.5L571,259.5L545,261.5L521.5,262L502,262L500,258.5L501,255L499,244.5L499.5,242L496.5,240L497,234L494,229.5L490.5,218.5L487.5,212L489,210L489.5,205.5L491,204L488.5,200L489.5,198L488,195Z"/>
+<path d="M677,131L682,132.5L680,133.5ZM663.5,133L663.5,133L663.5,133ZM662.5,138.5L663,135L664.5,138ZM661,135.5L661,135.5L661,135.5ZM659,142.5L659,142.5L659,142.5ZM656.5,149.5L656.5,149.5L656.5,149.5ZM655.5,152.5L655.5,152.5L655.5,152.5ZM645.5,140L645.5,140L645.5,140ZM652,227.5L655,224L657,219L658.5,215.5L660,210L660,204.5L659,198L652.5,184.5L654,180L652,175L655,168L655,159.5L657,158.5L657,155L661,153.5L663.5,148L664.5,150.5L664,156L665,157L666.5,152L666,157.5L668,153L667.5,145.5L669.5,143.5L674,142L672,141L670.5,138.5L673,134.5L675.5,132.5L680.5,135L684.5,135L686.5,138L690,138L695,140L696.5,140L701.5,147L699,146L699,149L701,150.5L702,154L702.5,162.5L699,165.5L699,169.5L695.5,171.5L694,177L695,179L699,180L704.5,170.5L710,167.5L713,169L715,172.5L718,181L719,186L721.5,191L721,200L718.5,202L719,198.5L716.5,199.5L715,206.5L712,209.5L712.5,213L710,217L708.5,221.5L686,225.5L685.5,224L669,226ZM601.5,92.5L602.5,91L610,86L613.5,84.5L610,88.5L605,91.5L603.5,93.5ZM585.5,123L591.5,120L594,117.5L600.5,116L605,112L607,112L608.5,109.5L613,106L615,103L618.5,100.5L624.5,99.5L626,101L622,102L617.5,108L615.5,112L615.5,116.5L618.5,112.5L624,112.5L628.5,114.5L633,121L643.5,121.5L643,119L645.5,120.5L647,118.5L652,115L662,114L665.5,112L670,111L669,113L670,117.5L673,118L675.5,117L676.5,118.5L679,116L683.5,115L684.5,121.5L682.5,123L686,123.5L687,125.5L690,126L690,124L693,123.5L695,126L694,127.5L685,127L681,129L676.5,126.5L675.5,129L676.5,131L674,131L671,128.5L666,127L663,127.5L661,130.5L657,132L652.5,131.5L650.5,133L650.5,135.5L645,139L647.5,134.5L643.5,134.5L643,137.5L638,139.5L632.5,153L630,151.5L631,147.5L627.5,147L628.5,144L628,140L624.5,137.5L622.5,137.5L622.5,135L612,134L606.5,131.5L590.5,128L588.5,124Z"/>
+<path d="M198,39L210.5,41.5L233,46L265.5,52L303,57.5L326,60.5L340.5,62L364.5,64.5L377,65.5L371,134.5L369.5,155.5L369,155.5L339.5,153L339,153L298.5,148L263.5,143L258,142L256,154L253.5,151L252.5,147.5L250,147.5L249.5,151L243.5,149.5L239.5,150L236.5,148.5L234.5,151L228.5,149L227,151.5L225,149L224,141.5L221,140.5L219.5,138.5L220,134L218.5,132.5L217,127.5L216,123L217,121L214.5,118L211.5,121L208,122.5L205,119.5L206.5,117.5L206,115L208.5,113.5L208,109L211,101.5L213.5,96.5L209,95.5L208,93L205,89.5L205.5,88.5L201.5,82.5L201,79.5L198,78L195.5,74.5L197,74L196,72L197,68.5L193.5,61.5Z"/>
+<path d="M886,110.5L886.5,105L888,103.5L890.5,104L891,102.5L895,114.5L904.5,145L907.5,147L908,149L910,150L909.5,155L906,156L903,160.5L884,165L882.5,163.5L882,157.5L880.5,146L883,133L882,128L885,126.5L888,122L887.5,119L885.5,117L887,112.5Z"/>
+<path d="M899.5,195.5L899.5,195.5L899.5,195.5ZM896.5,198L896.5,198L896.5,198ZM869,217L868.5,220.5L866.5,221.5L867,218.5ZM815.5,154L815.5,154L815.5,154ZM814,153.5L814,153.5L814,153.5ZM767.5,200.5L776.5,192L777.5,189L780.5,186L778.5,182.5L777,182L775,176L784,171.5L792,170.5L796,170.5L800,172L802,170.5L809,169L813,166.5L816.5,162L819.5,161L819.5,158.5L817,154.5L819.5,152.5L814.5,150.5L815,146.5L820.5,141.5L822,137.5L828.5,128L832.5,124.5L845,121L857.5,118L859,122.5L859,127.5L861,129L862,134L861.5,139.5L864,145.5L863.5,148.5L865.5,148.5L867,150.5L870.5,165.5L871,167.5L870.5,183L871,184L874,201L875.5,202.5L872.5,206L874,208.5L873.5,211L877,208.5L881.5,208.5L882.5,206.5L891,204L894.5,199.5L899.5,202L903,199.5L895.5,206L885.5,213L878,217L874,217.5L871.5,219.5L869,216.5L870,209L855,204L854,202.5L849.5,202.5L847,196.5L844.5,194.5L843,195L841,192L825,195.5L800.5,200.5L768.5,206.5Z"/>
+<path d="M720.5,223L720.5,223L720.5,223ZM718.5,222.5L718.5,222.5L718.5,222.5ZM686,225.5L708.5,221.5L715,224L717.5,225.5L719,223.5L723,226.5L725.5,227.5L733,223.5L737.5,223L742,218.5L748.5,213L756,209L761,239L759,241L760.5,243L761,246.5L759.5,252.5L760,256L758,263.5L753.5,269.5L751.5,270.5L750,269.5L748,273L746.5,273L744.5,278L746,281.5L744,282.5L741.5,279.5L738.5,285.5L739.5,290L738,290.5L738,293.5L733,295L730.5,292L728.5,291.5L727,288L724.5,289L723,291.5L720.5,292.5L716,290.5L714,292.5L710,290L704,290L701,285L698.5,283L696.5,284.5L693.5,283L692.5,284.5L688.5,247.5Z"/>
+<path d="M71,70L74.5,74L77,74L79.5,77L80,80L79,87L86,91.5L94,90L98,90.5L102.5,93L103,94.5L112,94L114,95.5L118.5,96L123,95L130.5,95L136,95.5L138.5,95L170.5,102.5L172,107L175,109L175.5,112.5L171,118L169,122L167,124L166.5,126L164,129L162,130L157.5,136.5L158,140L161,141L161.5,143.5L158,150.5L149,190.5L121.5,184.5L100.5,179L83.5,175L62,168.5L46.5,164L32.5,160L31,156.5L32,149L33.5,146.5L33,140L35.5,137L38.5,131.5L42.5,126L45.5,120.5L52.5,102.5L53.5,99L57,92.5L61,81.5L62,75L63.5,74L64,69L65,70.5Z"/>
+<path d="M612,363L614,360L612,357.5L615.5,354L614.5,351.5L615.5,351.5L617,351.5L619,351L641.5,349.5L641,345.5L645,346L672,343L681,343L692.5,341.5L704,341L719.5,339L720,338.5L727,338L755.5,334L755,338L752.5,341L750.5,345.5L747,345L744,347L743.5,349L741,350.5L740,348.5L738,350L734.5,356L733,355.5L726.5,361.5L721,362.5L717.5,366L717.5,369L712.5,371.5L712.5,377L689,379.5L666.5,382L641.5,383.5L641.5,384L619,385.5L603,386.5L605,384L607,383L605.5,380.5L606.5,377.5L604.5,377.5L607,374L610,371.5L608.5,369.5L612.5,367.5L611.5,365.5L613.5,365Z"/>
+<path d="M197.5,201L200,201.5L247,209.5L243.5,232L252.5,233.5L277,237L271,279.5L268.5,299L268.5,301.5L264.5,328L239.5,324.5L202.5,318L176,313.5L176.5,311Z"/>
+<path d="M855.5,284L856,282.5L862.5,280.5L861.5,284.5L860,285L858.5,288L858.5,292L856.5,301.5L854.5,303.5L852.5,300.5L853,292L855.5,286ZM850,285L849,285L850,285ZM747,313L747,314.5L750,318.5L753.5,320L755.5,319.5L758.5,316L761.5,318L766.5,315.5L767,312.5L769,313.5L773,310.5L774,311.5L776.5,309.5L777.5,306.5L776,305L777,302L780,297.5L780.5,294L783.5,286.5L784,283L787.5,285.5L790.5,286L791.5,283L794,275L796.5,276.5L803,266L802.5,259L813,265L814,260.5L816.5,260L818.5,261.5L818,264L821.5,265L826,267L828,270L827,274L825.5,275L824.5,278.5L826,281L829.5,278.5L832,282.5L838,283L840.5,285L846,287.5L845,289.5L846,293L842.5,294L840.5,291.5L838,290.5L842,294.5L846.5,295L848,300.5L845,299L846.5,303L849,305.5L847.5,308.5L843,306L842,304L840,305L846.5,310.5L849.5,310L849,308.5L855,308.5L859,316L840.5,320L812,325.5L780.5,331L755.5,334L727,338L720,338.5L729,334L730,331.5L733,330.5L733,328L735.5,326.5L735,324.5L741,320.5Z"/>
+<path d="M93,51L95,48L94,51.5ZM98.5,24.5L98.5,24.5L98.5,24.5ZM99,20.5L99,20.5L99,20.5ZM97.5,23.5L97.5,23.5L97.5,23.5ZM95,31L98.5,27.5L99.5,30.5L96,31.5L97.5,32.5L97,36.5L98.5,35L99.5,37L98,39L96,36L97,33ZM95.5,18L95.5,18L95.5,18ZM93.5,19.5L93.5,19.5L93.5,19.5ZM95,13L95,13L95,13ZM91,21L96,20L98,22L95.5,26.5L91.5,24ZM91,19L91,19L91,19ZM183.5,36L178.5,58.5L171,92.5L170,94L171.5,98.5L170.5,102.5L138.5,95L136,95.5L130.5,95L123,95L118.5,96L114,95.5L112,94L103,94.5L102.5,93L98,90.5L94,90L86,91.5L79,87L80,80L79.5,77L77,74L74.5,74L71,70L68.5,68.5L66,69L64,65L65.5,60L66,63L67.5,62.5L67,60L69.5,59L66,57L67,54.5L70.5,54L67,51L67.5,45L66.5,43L67.5,34L65.5,30L66.5,23.5L68,20.5L69.5,20L77,27L81,28.5L87.5,31.5L89,30.5L90,33L94.5,33L94,35L94.5,38.5L92,41.5L88,44L92,43L96.5,39L95,46L94,47L92.5,52.5L96,52L96,46.5L98,41.5L101.5,37.5L100.5,32.5L98,34L98.5,31.5L101,31.5L98,25.5L101,27L102.5,21L99.5,19L99,15.5L100,14.5L114.5,18.5L140,25.5L166.5,32Z"/>
+<path d="M642,146.5L642,146.5L642,146.5ZM635.5,150.5L635.5,150.5L635.5,150.5ZM584,113.5L584,113.5L584,113.5ZM583,116L583,116L583,116ZM581,115L581,115L581,115ZM579.5,117L579.5,117L579.5,117ZM580,114.5L580,114.5L580,114.5ZM579,113L582.5,113.5L581,114.5ZM579,118.5L579,118.5L579,118.5ZM576,114L576,114L576,114ZM560,121L563.5,121.5L568,119.5L576,115L579.5,116L578,119L577,123L580,120.5L585.5,123L588.5,124L590.5,128L606.5,131.5L612,134L622.5,135L622.5,137.5L624.5,137.5L628,140L628.5,144L627.5,147L631,147.5L630,151.5L632.5,153L632,155.5L629,156.5L627,162L626,165.5L628,166L630.5,163.5L632.5,159L635.5,157L638,151L641.5,147.5L641,152.5L639,155.5L635.5,165L634.5,170.5L635.5,173.5L633.5,175.5L632.5,181L633.5,185.5L632.5,187.5L631,195.5L631.5,201L634,205.5L634,212.5L618,213.5L587,215.5L585.5,212.5L580,210.5L578,207L577.5,201.5L579,198.5L576.5,196.5L576.5,193.5L575.5,190.5L575.5,187L572.5,182L570,181.5L565,178L564,175L559,172.5L557,170L553.5,170L549.5,166L550,161.5L549.5,153.5L551.5,150L549.5,147.5L547.5,147.5L547.5,144L551,139L555.5,137L556.5,135.5L556,122.5L559,120Z"/>
+<path d="M365.5,201L404,204L434,205.5L457,206L457.5,207.5L465.5,211.5L467,209.5L470.5,210L476.5,209.5L479.5,212L482,212L486.5,214.5L488,218L490.5,218.5L494,229.5L497,234L496.5,240L499.5,242L499,244.5L501,255L500,258.5L502,262L504.5,268L507,270L508,274L510,275L495.5,275L465,275L443.5,274.5L422.5,273.5L394,272L395.5,249L361.5,246.5Z"/>
+<path d="M170.5,102.5L171.5,98.5L170,94L171,92.5L178.5,58.5L183.5,36L198,39L193.5,61.5L197,68.5L196,72L197,74L195.5,74.5L198,78L201,79.5L201.5,82.5L205.5,88.5L205,89.5L208,93L209,95.5L213.5,96.5L211,101.5L208,109L208.5,113.5L206,115L206.5,117.5L205,119.5L208,122.5L211.5,121L214.5,118L217,121L216,123L217,127.5L218.5,132.5L220,134L219.5,138.5L221,140.5L224,141.5L225,149L227,151.5L228.5,149L234.5,151L236.5,148.5L239.5,150L243.5,149.5L249.5,151L250,147.5L252.5,147.5L253.5,151L256,154L247,209.5L200,201.5L197.5,201L159.5,193L149,190.5L158,150.5L161.5,143.5L161,141L158,140L157.5,136.5L162,130L164,129L166.5,126L167,124L169,122L171,118L175.5,112.5L175,109L172,107Z"/>
+<path d="M100.5,179L121.5,184.5L149,190.5L159.5,193L197.5,201L176.5,311L176,313.5L172.5,331.5L170,335L168.5,335L166.5,331.5L163,330.5L160,331L159,338L159,342.5L158,345L158.5,353L157,356L83.5,245.5Z"/>
+<path d="M857.5,118L873.5,114L886,110.5L887,112.5L885.5,117L887.5,119L888,122L885,126.5L882,128L883,133L880.5,146L882,157.5L882.5,163.5L884,165L871,167.5L870.5,165.5L867,150.5L865.5,148.5L863.5,148.5L864,145.5L861.5,139.5L862,134L861,129L859,127.5L859,122.5Z"/>
+<path d="M637.5,497.5L637.5,497.5L637.5,497.5ZM628.5,498L631.5,495.5L632,498ZM623.5,510L623.5,510L623.5,510ZM609.5,521L609.5,521L609.5,521ZM606,521.5L606,521.5L606,521.5ZM602,522.5L602,522.5L602,522.5ZM576.5,511.5L580,510.5L582.5,512L580,514ZM535,434.5L569.5,434L589.5,433L591.5,435.5L590,439L592,439.5L590,441.5L593,441.5L591,445L593.5,445.5L595.5,448L590.5,451.5L592.5,453L592.5,455.5L590,457L587,461.5L586.5,466L584.5,467L585.5,470L583.5,470L584.5,473L582,473L584,478L582.5,479L606,478L619,477L617.5,485L621,489.5L622.5,493L625,495.5L619,499L619,501L621,500.5L624,502.5L624,499.5L625.5,497.5L628,501.5L630,499.5L630.5,502L628,503L627.5,507L623,508L622.5,509.5L626.5,513.5L632.5,514L635,518L634,522L632,520L629,523.5L630.5,519L624,515.5L620,515.5L612.5,521L610,516.5L608,515.5L605,517.5L601,523L598,520L595,520L590.5,517.5L591.5,516L594.5,518.5L594.5,516.5L591.5,514.5L590,515.5L589.5,512.5L587.5,513.5L585.5,510L584,510L584,508L579,508.5L579,506L574.5,508L573,508L575,511L570.5,513L565,512L553.5,508L547.5,508.5L542.5,509.5L540.5,510.5L539,507.5L543,502L543,493.5L542.5,490.5L545.5,484.5L546,480L545.5,476L542,469L539.5,467L540,463L535.5,458Z"/>
+<path d="M910.5,183L913,186.5L909,188.5ZM908.5,188.5L908.5,188.5L908.5,188.5ZM906.5,196L906.5,196L906.5,196ZM901.5,193.5L902,191L899,178L905.5,176L907.5,181L910,182L906.5,181L908,188L907.5,190.5Z"/>
+</g>
+<g class="ep-ctx-labels" aria-hidden="true">
+<text x="208" y="382">Arizona</text>
+<text x="332" y="290">Colorado</text>
+<text x="795" y="535">Florida</text>
+<text x="665" y="269">Indiana</text>
+<text x="456" y="309">Kansas</text>
+<text x="919" y="93">Maine</text>
+<line x1="940" y1="168" x2="917" y2="170"/><circle cx="917" cy="170" r="1.8"/><text x="942" y="170" style="text-anchor:start">Massachusetts</text>
+<text x="525" y="132">Minnesota</text>
+<line x1="940" y1="234" x2="868" y2="232"/><circle cx="868" cy="232" r="1.8"/><text x="942" y="236" style="text-anchor:start">New Jersey</text>
+<text x="806" y="352">North Carolina</text>
+<text x="429" y="104"><tspan x="429" dy="-0.55em">North</tspan><tspan x="429" dy="1.10em">Dakota</tspan></text>
+<text x="478" y="378">Oklahoma</text>
+<text x="800" y="214">Pennsylvania</text>
+<text x="430" y="172"><tspan x="430" dy="-0.55em">South</tspan><tspan x="430" dy="1.10em">Dakota</tspan></text>
+<text x="308" y="195">Wyoming</text>
+<line x1="940" y1="212" x2="888" y2="196"/><circle cx="888" cy="196" r="1.8"/><text x="942" y="214" style="text-anchor:start">Connecticut</text>
+<text x="764" y="282"><tspan x="764" dy="-0.55em">West</tspan><tspan x="764" dy="1.10em">Virginia</tspan></text>
+<text x="615" y="270">Illinois</text>
+<text x="311" y="393"><tspan x="311" dy="-0.55em">New</tspan><tspan x="311" dy="1.10em">Mexico</tspan></text>
+<text x="88" y="290">California</text>
+<text x="540" y="227">Iowa</text>
+<text x="694" y="190">Michigan</text>
+<text x="287" y="100">Montana</text>
+<line x1="940" y1="146" x2="898" y2="146"/><circle cx="898" cy="146" r="1.8"/><text x="942" y="148" style="text-anchor:start">New Hampshire</text>
+<text x="818" y="163">New York</text>
+<text x="724" y="253">Ohio</text>
+<text x="103" y="134">Oregon</text>
+<text x="668" y="362">Tennessee</text>
+<text x="227" y="269">Utah</text>
+<text x="790" y="306">Virginia</text>
+<text x="124" y="59">Washington</text>
+<text x="595" y="167">Wisconsin</text>
+<text x="434" y="239">Nebraska</text>
+<text x="205" y="178">Idaho</text>
+<text x="142" y="252">Nevada</text>
+<line x1="870" y1="104" x2="872" y2="124"/><circle cx="872" cy="124" r="1.8"/><text x="866" y="100" style="text-anchor:end">Vermont</text>
+<text x="575" y="492">Louisiana</text>
+<line x1="940" y1="190" x2="907" y2="187"/><circle cx="907" cy="187" r="1.8"/><text x="942" y="192" style="text-anchor:start">Rhode Island</text>
+</g>
+<g class="ep-st" data-ep="e7" tabindex="0" role="button" aria-label="Texas"><path d="M371.5,351L396.5,352.5L426,354L424,398.5L426,398.5L429.5,402.5L431.5,402L435,403L435.5,401L438.5,404L438.5,407L442.5,407L446.5,409L450,408.5L451.5,410.5L454,408.5L457.5,409.5L459,412L461.5,412.5L461,414.5L463,416L466.5,412.5L470.5,414.5L472.5,416.5L475.5,414.5L476,418.5L481,414L484,416.5L485.5,414.5L490,418L491.5,420L493,418L499,415L501,416.5L506,414L506.5,415.5L511.5,415.5L512.5,413.5L517.5,415.5L519.5,418.5L526.5,420.5L529,423L532,421.5L535,422.5L535,434.5L535.5,458L540,463L539.5,467L542,469L545.5,476L546,480L545.5,484.5L542.5,490.5L543,493.5L543,502L539,507.5L540.5,510.5L535,511.5L522.5,517.5L526.5,513.5L522,514.5L523.5,509L521.5,509L520,511L518.5,510.5L517.5,514L519.5,515L520,519.5L516,522.5L515,524.5L521.5,518.5L523,519L517.5,523L510.5,529.5L492,539L489,542L485.5,544L480,548.5L475,555.5L472,562L470.5,566L470,574L473.5,587L474,592L472,582L469.5,576L469.5,569L471.5,560L475.5,553.5L480.5,546L486,542.5L489,541.5L489,539.5L484.5,542L482.5,540L482,544L479.5,546.5L477,545L473.5,547L477.5,546.5L474,553L473,552L468.5,552L470.5,555L472.5,556L469.5,564.5L467.5,563.5L465,566L469,565.5L468,576L469,583L472,588L471.5,591.5L474.5,592.5L474.5,595L469.5,596L469.5,597.5L466.5,596.5L464,593.5L461,592.5L454,592.5L452,592L447.5,588.5L443,588L440,585L434.5,583.5L431.5,574L428,570L428.5,566.5L427,564.5L427.5,559.5L425.5,556L423.5,555.5L420,552L419,548L416,544L412,541L410,534L406,526.5L405,521.5L403,518.5L399,515.5L398,513.5L394,511.5L393.5,508.5L390.5,505.5L386,506L383,505L378,504.5L373.5,502.5L372.5,505L370.5,504.5L366.5,505.5L363.5,510L361,517L359.5,517.5L357,521.5L353.5,521.5L348.5,517L345,516L343,514L340.5,513L337,511L330,503.5L327.5,498L328,492L325,487L325,483L323,480L316,475.5L312.5,470L309,467.5L306,462.5L301.5,460L299,453.5L296.5,452L294.5,449.5L295,447L318,449.5L338.5,451.5L363,453.5L364.5,429.5L366.5,407.5L371,350.5Z"/><text x="434" y="469">Texas</text></g>
+<g class="ep-st" data-ep="e10" tabindex="0" role="button" aria-label="Arkansas"><path d="M523,355.5L550,354.5L586,353L603.5,352L605,357.5L603,359.5L600,364L612,363L613.5,365L611.5,365.5L612.5,367.5L608.5,369.5L610,371.5L607,374L604.5,377.5L606.5,377.5L605.5,380.5L607,383L605,384L603,386.5L604,388.5L598.5,393L600.5,394.5L598,395.5L598.5,400.5L595.5,401.5L594,407L592,407.5L593.5,409.5L589.5,411L592,415L589,415.5L590,418L587.5,418L589.5,419.5L587.5,420.5L587.5,423L589.5,425L590.5,430L588.5,430.5L589.5,433L569.5,434L535,434.5L535,422.5L532,421.5L529,423L526.5,420.5L527,380.5Z"/><text x="564" y="391">Arkansas</text></g>
+<g class="ep-st" data-ep="e6" tabindex="0" role="button" aria-label="Missouri"><path d="M502,262L521.5,262L545,261.5L571,259.5L576.5,264.5L575,268L575.5,272.5L578,279.5L583,283.5L584,285.5L589.5,290L591.5,297.5L593.5,298.5L595,296L601,298.5L599.5,301.5L600,303L597.5,309.5L597.5,313L606,320.5L607,319.5L612,324L614,326.5L613.5,328L615,332L614,333.5L618.5,340L619,338L621,340L622,340.5L620,349.5L617.5,348.5L617,351.5L615.5,351.5L614.5,351.5L615.5,354L612,357.5L614,360L612,363L600,364L603,359.5L605,357.5L603.5,352L586,353L550,354.5L523,355.5L523,344L522.5,295L518.5,293L516.5,289L513.5,286L516,281L517.5,281.5L516.5,277.5L511.5,277.5L510,275L508,274L507,270L504.5,268Z"/><text x="560" y="312">Missouri</text></g>
+<g class="ep-st" data-ep="e3" tabindex="0" role="button" aria-label="Mississippi"><path d="M644.5,493L644.5,493L644.5,493ZM639.5,493L639.5,493L639.5,493ZM635,494L635,494L635,494ZM632,493.5L632,493.5L632,493.5ZM589.5,433L588.5,430.5L590.5,430L589.5,425L587.5,423L587.5,420.5L589.5,419.5L587.5,418L590,418L589,415.5L592,415L589.5,411L593.5,409.5L592,407.5L594,407L595.5,401.5L598.5,400.5L598,395.5L600.5,394.5L598.5,393L604,388.5L603,386.5L619,385.5L641.5,384L643.5,386L643,413L642,455L646.5,489.5L644.5,491L636,489.5L633,490.5L626.5,493.5L625,495.5L622.5,493L621,489.5L617.5,485L619,477L606,478L582.5,479L584,478L582,473L584.5,473L583.5,470L585.5,470L584.5,467L586.5,466L587,461.5L590,457L592.5,455.5L592.5,453L590.5,451.5L595.5,448L593.5,445.5L591,445L593,441.5L590,441.5L592,439.5L590,439L591.5,435.5Z"/><text x="614" y="470" style="font-size:10px;stroke-width:2px">Mississippi</text></g>
+<g class="ep-st" data-ep="e9" tabindex="0" role="button" aria-label="Alabama"><path d="M648,492.5L648,492.5L648,492.5ZM641.5,384L641.5,383.5L666.5,382L689,379.5L702.5,427L704.5,432L708,436.5L707.5,439L709.5,440L706.5,443L707,446L706,450L708.5,457L708.5,465L711,469L693.5,471L660.5,474L660.5,477L665,481L664.5,484.5L666.5,486.5L663.5,490L657.5,492L659,490L656,488L655,482L653.5,481.5L652,486L651.5,490L649,489L646.5,489.5L642,455L643,413L643.5,386Z"/><text x="672" y="432">Alabama</text></g>
+<g class="ep-st" data-ep="e1" tabindex="0" role="button" aria-label="Georgia"><path d="M689,379.5L712.5,377L725.5,375L735,373.5L735,375L731.5,379L731.5,381.5L738.5,385.5L741,385.5L744.5,391.5L748.5,396L754.5,399.5L756,402.5L759,403.5L762,406L761.5,407.5L763.5,408.5L765.5,412L771.5,414.5L773,418L774,423L777,424L781,429.5L781.5,433.5L786,434.5L787,436L782.5,442.5L782.5,447L781,451L781.5,454.5L779.5,456.5L778.5,460L780,461.5L780,466L774.5,466L770,465L768.5,466L770,471L769.5,475.5L767.5,476L766,471.5L714,475L711,469L708.5,465L708.5,457L706,450L707,446L706.5,443L709.5,440L707.5,439L708,436.5L704.5,432L702.5,427Z"/><text x="738" y="428">Georgia</text></g>
+<g class="ep-st" data-ep="e5" tabindex="0" role="button" aria-label="South Carolina"><path d="M735,373.5L745.5,368L749.5,367L772,364.5L772.5,367L774,365.5L777.5,369L777.5,371.5L798,368.5L823,386L820,388L816.5,392L813.5,399L813.5,403.5L811,408L808,408L807.5,411L803,415L800.5,419L797,420.5L795,423L792,423.5L793,427L790,429L786.5,433L786,434.5L781.5,433.5L781,429.5L777,424L774,423L773,418L771.5,414.5L765.5,412L763.5,408.5L761.5,407.5L762,406L759,403.5L756,402.5L754.5,399.5L748.5,396L744.5,391.5L741,385.5L738.5,385.5L731.5,381.5L731.5,379L735,375Z"/><text x="781" y="394"><tspan x="781" dy="-0.55em">South</tspan><tspan x="781" dy="1.10em">Carolina</tspan></text></g>
+<g class="ep-st" data-ep="e2" tabindex="0" role="button" aria-label="Kentucky"><path d="M621,340L620.5,337.5L624.5,334L631.5,337L633.5,335L631.5,332L632,330L639,327.5L637.5,323L639.5,319.5L645.5,317L646.5,318.5L646.5,315L648.5,316.5L650.5,315.5L655.5,318.5L656.5,315.5L661,313.5L662.5,315.5L666,314.5L665.5,311.5L668.5,309L670,310.5L674,313L675.5,311.5L677,305L680,303.5L680.5,301L683.5,298L682.5,295L685,293.5L687.5,294.5L690.5,292L693.5,291.5L691.5,285.5L692.5,284.5L693.5,283L696.5,284.5L698.5,283L701,285L704,290L710,290L714,292.5L716,290.5L720.5,292.5L723,291.5L724.5,289L727,288L728.5,291.5L730.5,292L733,295L734,301.5L736.5,305.5L739.5,308.5L741,311L744.5,313L747,313L741,320.5L735,324.5L735.5,326.5L733,328L733,330.5L730,331.5L729,334L720,338.5L719.5,339L704,341L692.5,341.5L681,343L672,343L645,346L641,345.5L641.5,349.5L619,351L617,351.5L617.5,348.5L620,349.5L622,340.5ZM615.5,351.5L614.5,351.5L615.5,351.5Z"/><text x="700" y="316">Kentucky</text></g>
+<g class="ep-st" data-ep="e4" tabindex="0" role="button" aria-label="Maryland"><path d="M850,285L849,285L850,285ZM847.5,281.5L847.5,281.5L847.5,281.5ZM782.5,257L816.5,250.5L845,244.5L852.5,272.5L863.5,270.5L862.5,280.5L856,282.5L855.5,284L851.5,285.5L851,282L847.5,275.5L847.5,278.5L845.5,279L841.5,274L842,271.5L846.5,271.5L840,268L842.5,266L841,263.5L839,266.5L839.5,261.5L841.5,263L842,260L839.5,259.5L840,254.5L842.5,253L842.5,249L840.5,250L841.5,251.5L839,254.5L837,254L837.5,257L836.5,259L838,262.5L836,269L838,274L841,276.5L840.5,279L843.5,282L844,284L841,283.5L838.5,281.5L834.5,281.5L831,279.5L830,277.5L827,280L825.5,277.5L827,274L828,270L829.5,267L827,265.5L826,267L821.5,265L818,264L818.5,261.5L816.5,260L814,260.5L810.5,256.5L811,254.5L807.5,255L804.5,253.5L802,255L800.5,258.5L797,258.5L794.5,257.5L792.5,261.5L789.5,261.5L787,266L784,268.5Z"/><line x1="922" y1="290" x2="836" y2="275"/><circle class="ep-tip" cx="836" cy="275" r="2.5"/><rect class="ep-pill" x="922" y="279" width="84" height="24" rx="12"/><text x="964" y="291">Maryland</text></g>
+<g class="ep-st" data-ep="e8" tabindex="0" role="button" aria-label="Delaware"><path d="M849,246L849.5,246.5L849,246ZM845,244.5L846.5,242L851,241.5L849.5,244.5L848.5,246.5L849.5,249.5L853,252.5L855,258L859.5,263L861.5,262.5L863.5,270.5L852.5,272.5Z"/><line x1="922" y1="261" x2="853" y2="262"/><circle class="ep-tip" cx="853" cy="262" r="2.5"/><rect class="ep-pill" x="922" y="250" width="84" height="24" rx="12"/><text x="964" y="262">Delaware</text></g>
+</svg>
+      </div>
+      <p class="ep-cap"><span id="ep-count">0 of 10 sorted</span>. Gray states aren’t part of this sort.</p>
+      <div class="ep-zones">
+        <div class="ep-zone z-freed" data-zone="freed"><button type="button" class="zone-head"><span><i class="ep-sw" aria-hidden="true"></i>Freed</span><span class="place">Place here</span></button><div class="cards"></div></div>
+        <div class="ep-zone z-not" data-zone="not"><button type="button" class="zone-head"><span><i class="ep-sw" aria-hidden="true"></i>Not Freed</span><span class="place">Place here</span></button><div class="cards"></div></div>
+      </div>
+      <div class="actions"><button class="btn" data-action="check-ep">Check placements</button><p class="status" id="ep-status" role="status" aria-live="polite"></p></div>
+      <p class="after" id="ep-after" hidden>Kentucky, Maryland, Missouri, and Delaware were border states: slave states that stayed in the Union. In the Confederate states, freedom came only as Union armies took control.</p>
+    </div>
+  </section>
+
+  <section id="matching">
+    <header>
+      <h2>Matching</h2>
+      <p>Pick the best match for each description. Each choice is used once.</p>
+    </header>
+    <div id="match-body"></div>
+  </section>
+
+  <footer>
+    <span>Answers save in this browser on this device.</span>
+    <button class="reset" id="reset" type="button">Erase all my answers</button>
+  </footer>
+</main>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- Content ---------- */
+var CONCEPTS = [
+  {id:"kc1", title:"The road to secession", notes:"the election of 1860 and secession", items:[
+    "At the 1860 Democratic Convention, [[Northern|north|northern democrats]] delegates nominated a candidate for president, but [[Southern|south|southern democrats]] delegates did not.",
+    "That split divided the Democratic vote and helped [[Lincoln|abraham lincoln|abe lincoln]] win the election.",
+    "[[South Carolina|sc]] was the first state to secede after the election.",
+    "The main reason Southern states seceded was to protect the institution of [[slavery]].",
+    "The Confederate constitution [[guaranteed|protected|guarantee|protect|ensured|secured]] slavery in Confederate territory."
+  ]},
+  {id:"kc2", title:"The war begins", notes:"Fort Sumter, raising armies, and the blockade", items:[
+    "In April 1861, Confederates attacked Fort [[Sumter]] in Charleston Harbor.",
+    "They attacked to stop the [[supplies|supply|food|provisions|food and supplies|resupply]] Lincoln was sending to the fort.",
+    "To raise troops, both the North and South began [[conscripting|drafting|conscription|draft]] civilians into service.",
+    "The Union used its navy to [[blockade|block|blockaded|close]] Southern ports.",
+    "Some objected that the blockade violated [[international|international law]] law."
+  ]},
+  {id:"kc3", title:"North vs. South", notes:"North vs. South strengths and weaknesses", items:[
+    "One advantage the Confederacy had was many well-trained [[officers|generals|military officers|military leaders|leaders|commanders]].",
+    "The North had a much larger [[population|people|number of people]], plus more factories and more railroad lines.",
+    "The South was fighting a [[defensive|defense]] war on its home ground."
+  ]},
+  {id:"kc4", title:"Turning points, 1862–1863", notes:"Antietam, the Emancipation Proclamation, Vicksburg, and Gettysburg", items:[
+    "The Battle of [[Antietam]] was the bloodiest single day of the war.",
+    "The Emancipation Proclamation freed enslaved people only in states at [[war|rebellion]] with the Union.",
+    "It did not free enslaved people in the [[border|border states]] states that stayed loyal to the Union.",
+    "By capturing [[Vicksburg]], the Union gained control of the [[Mississippi|mississippi river]] River and split the Confederacy in two.",
+    "At [[Gettysburg]], the Confederacy lost more than one-[[third|3rd]] of its troops, so afterward it fought on the [[defensive|defense]]."
+  ]},
+  {id:"kc5", title:"Ending the war", notes:"Sherman, the 1864 election, and the end of the war", items:[
+    "In Georgia, General [[Sherman|william sherman|william t sherman]]’s troops burned [[Atlanta]] and destroyed crops.",
+    "In the 1864 election, Lincoln beat General George B. [[McClellan|mcclelan|mcclellen|maclellan]] by a landslide.",
+    "The war ended when General [[Lee|robert e lee|robert lee]] surrendered at [[Appomattox|appomattox court house|appomattox courthouse]] Court House in April 1865.",
+    "The war left the South socially and [[economically|economic|financially]] destroyed."
+  ]}
+];
+
+var CHAIN = [
+  "Election of [[1860]]: the [[Democratic|democrat|democrats]] Party splits between North and South.",
+  "[[Lincoln|abraham lincoln|abe lincoln]] wins the presidency without carrying a single Southern state.",
+  "[[South Carolina|sc]] secedes first, in December 1860.",
+  "Seceding states form the [[Confederacy|confederate states of america|confederate states|csa]], led by President [[Jefferson Davis|davis|jeff davis]].",
+  "Their new constitution guarantees [[slavery]].",
+  "Lincoln sends [[supplies|supply|food|provisions|resupply]] to Fort Sumter.",
+  "Confederates fire on the fort in [[April|apr]] 1861, and the war begins."
+];
+
+var MAP = [
+  "River the Union needed to control: [[Mississippi River|mississippi]]",
+  "City the Union captured on July 4, 1863, after a siege: [[Vicksburg]]",
+  "Union navy strategy shown by the dashed line: [[blockade|union blockade|naval blockade|anaconda plan|anaconda]]",
+  "Fort in Charleston Harbor where the first shots were fired: [[Fort Sumter|sumter]]",
+  "City Sherman’s troops burned in 1864: [[Atlanta]]",
+  "Battle in Pennsylvania that became the turning point: [[Gettysburg]]",
+  "Place in Virginia where Lee surrendered in April 1865: [[Appomattox Court House|appomattox|appomattox courthouse]]"
+];
+
+var EVENTS = {
+  lincoln:{t:"Election of Abraham Lincoln", d:"November 1860"},
+  secession:{t:"Secession of Southern states", d:"December 1860 into 1861"},
+  sumter:{t:"Attack on Fort Sumter", d:"April 1861"},
+  bullrun:{t:"First Battle of Bull Run", d:"July 1861"},
+  antietam:{t:"Battle of Antietam", d:"September 1862"},
+  emancipation:{t:"Emancipation Proclamation", d:"January 1, 1863"},
+  gettysburg:{t:"Battle of Gettysburg", d:"July 1–3, 1863"},
+  vicksburg:{t:"Siege of Vicksburg", d:"May 18 to July 4, 1863"},
+  sherman:{t:"Sherman’s March to the Sea", d:"November–December 1864"},
+  appomattox:{t:"Appomattox Court House", d:"April 9, 1865"}
+};
+var TL_CORRECT = ["lincoln","secession","sumter","bullrun","antietam","emancipation","gettysburg","vicksburg","sherman","appomattox"];
+var TL_START = ["emancipation","sumter","sherman","lincoln","vicksburg","antietam","appomattox","secession","gettysburg","bullrun"];
+
+var SORTS = [
+  {id:"ns",
+   boxes:[{id:"nAdv",label:"North advantages",tone:"blue"},{id:"sAdv",label:"South advantages",tone:"gray"},{id:"nDis",label:"North disadvantages",tone:"blue"},{id:"sDis",label:"South disadvantages",tone:"gray"}],
+   cards:[
+    {id:"c1",text:"Larger population",box:"nAdv"},
+    {id:"c2",text:"Many well-trained officers",box:"sAdv"},
+    {id:"c3",text:"Had to invade unfamiliar territory",box:"nDis"},
+    {id:"c4",text:"Few factories",box:"sDis"},
+    {id:"c5",text:"More railroad lines",box:"nAdv"},
+    {id:"c6",text:"Almost no navy",box:"sDis"},
+    {id:"c7",text:"Fighting a defensive war on home ground",box:"sAdv"},
+    {id:"c8",text:"Cautious, less skilled generals early in the war",box:"nDis"},
+    {id:"c9",text:"More factories and industry",box:"nAdv"},
+    {id:"c10",text:"Smaller population",box:"sDis"},
+    {id:"c11",text:"Soldiers defending their own homes",box:"sAdv"},
+    {id:"c12",text:"Long supply lines deep into the South",box:"nDis"},
+    {id:"c13",text:"Strong navy",box:"nAdv"},
+    {id:"c14",text:"Fewer railroad lines",box:"sDis"},
+    {id:"c15",text:"More money and banks",box:"nAdv"},
+    {id:"c16",text:"Some citizens opposed the war",box:"nDis"},
+    {id:"c17",text:"Weak central government because of states’ rights",box:"sDis"}
+   ],
+   after:"All sorted. Now cover the boxes and try to name two in each from memory, just like on the test."}
+];
+
+var EP_CARDS = [
+    {id:"e1",text:"Georgia",box:"freed"},
+    {id:"e2",text:"Kentucky",box:"not"},
+    {id:"e3",text:"Mississippi",box:"freed"},
+    {id:"e4",text:"Maryland",box:"not"},
+    {id:"e5",text:"South Carolina",box:"freed"},
+    {id:"e6",text:"Missouri",box:"not"},
+    {id:"e7",text:"Texas",box:"freed"},
+    {id:"e8",text:"Delaware",box:"not"},
+    {id:"e9",text:"Alabama",box:"freed"},
+    {id:"e10",text:"Arkansas",box:"freed"}
+];
+
+var MATCH = [
+  {id:"mp2", title:"People", notes:"the key leaders of the war",
+   options:["Abraham Lincoln","Jefferson Davis","Robert E. Lee","Ulysses S. Grant","William T. Sherman","George B. McClellan"],
+   rows:[
+    ["President of the United States who issued the Emancipation Proclamation","Abraham Lincoln"],
+    ["President of the Confederacy","Jefferson Davis"],
+    ["Union general who burned Atlanta and marched to the sea","William T. Sherman"],
+    ["Former Union general who ran against Lincoln in 1864","George B. McClellan"],
+    ["Confederate general who surrendered at Appomattox Court House","Robert E. Lee"],
+    ["Union general who captured Vicksburg and accepted Lee’s surrender","Ulysses S. Grant"]
+   ]},
+  {id:"me2", title:"Battles and events", notes:"major battles and turning points",
+   options:["Fort Sumter","Antietam","Emancipation Proclamation","Vicksburg","Gettysburg","Sherman’s March to the Sea","Appomattox Court House"],
+   rows:[
+    ["Bloodiest single day of the war","Antietam"],
+    ["Gave the Union control of the Mississippi River","Vicksburg"],
+    ["The first shots of the war","Fort Sumter"],
+    ["Lee’s surrender ends the war","Appomattox Court House"],
+    ["Turning point where the Confederacy lost over a third of its troops","Gettysburg"],
+    ["Freed enslaved people in states at war with the Union","Emancipation Proclamation"],
+    ["Total war: crops, railroads, and cities destroyed across Georgia","Sherman’s March to the Sea"]
+   ]}
+];
+
+var VOCAB = [
+  ["secession","Secession","Formally leaving the Union. Southern states seceded after Lincoln was elected in 1860."],
+  ["confederacy","Confederacy","The Confederate States of America: the nation formed by the Southern states that seceded. Its president was Jefferson Davis."],
+  ["union","Union","The United States government and the Northern states that stayed loyal to it."],
+  ["delegate","Delegate","A person chosen to represent a group at a convention, like the 1860 Democratic Convention."],
+  ["border","Border states","Slave states that stayed in the Union: Delaware, Maryland, Kentucky, and Missouri."],
+  ["conscription","Conscription","A law requiring people to serve in the military; also called the draft. Both sides used it."],
+  ["blockade","Blockade","Using ships to stop goods from entering or leaving ports. The Union blockaded Southern ports."],
+  ["anaconda","Anaconda Plan","The Union strategy to “squeeze” the South by blockading its coast and taking control of the Mississippi River. It ties the blockade and Vicksburg together."],
+  ["casualties","Casualties","Soldiers killed, wounded, captured, or missing in battle."],
+  ["emancipation","Emancipation Proclamation","Lincoln’s 1863 order freeing enslaved people in the states at war with the Union."],
+  ["siege","Siege","Surrounding a place and cutting off its supplies to force it to surrender, as the Union did at Vicksburg."],
+  ["turning","Turning point","An event that changes the direction of what happens next, like Gettysburg."],
+  ["total","Total war","Destroying an enemy’s resources, like crops, railroads, and cities, not just its armies. Sherman used total war in Georgia."],
+  ["landslide","Landslide","An election won by a very large margin, like Lincoln’s win in 1864."],
+  ["surrender","Surrender","Giving up to the enemy. Lee surrendered to Grant at Appomattox Court House in April 1865."]
+];
+
+var SA = [
+  ["sa1","What happened at the 1860 Democratic Convention, and how did it affect the election?","the election of 1860",
+   ["The party split between Northern and Southern delegates","Northern delegates nominated a candidate (Stephen Douglas), but Southern delegates did not support him","The divided Democratic vote helped Lincoln win"]],
+  ["sa2","What was the main reason Southern states seceded? What does the Confederate constitution show about this?","secession",
+   ["Southern states seceded to protect the institution of slavery","They feared Lincoln and the Republicans would limit slavery","The Confederate constitution guaranteed slavery"]],
+  ["sa3","Why did Confederates attack Fort Sumter, and why does it matter?","Fort Sumter",
+   ["Lincoln was sending supplies to the federal fort in Charleston Harbor","Confederates attacked before the supplies arrived, in April 1861","These were the first shots of the Civil War"]],
+  ["sa4","How did the North and South raise their armies? Define the key term in your answer.","raising armies",
+   ["Both sides used conscription, also called the draft","Conscription means the government requires people to serve in the military","As the war went on, not enough men volunteered"]],
+  ["sa5","What was the Union blockade, and why did some people object to it?","the blockade",
+   ["The Union navy closed Southern ports","It cut off Southern trade, like cotton going out and supplies coming in","Critics said it violated international law"]],
+  ["sa6","Who did the Emancipation Proclamation free, and who did it not free?","the Emancipation Proclamation",
+   ["It freed enslaved people in the states at war with the Union","It did not free enslaved people in the border states loyal to the Union","It made ending slavery a goal of the war and let African Americans join the Union army"]],
+  ["sa7","Why was the Battle of Antietam important?","Antietam",
+   ["It was the bloodiest single day of the war","It stopped Lee’s first invasion of the North","It gave Lincoln the chance to announce the Emancipation Proclamation"]],
+  ["sa8","Why was the Union’s capture of Vicksburg significant?","Vicksburg",
+   ["Grant’s army captured the city after a siege that ended July 4, 1863","The Union gained control of the Mississippi River","The Confederacy was split in two"]],
+  ["sa9","Why is the Battle of Gettysburg called the turning point of the war?","Gettysburg",
+   ["Lee’s invasion of the North failed (Pennsylvania, July 1863)","The Confederacy lost more than one-third of its troops","Afterward, the South fought mostly on the defensive"]],
+  ["sa10","What did General Sherman’s troops do in Georgia, and why?","Sherman’s March to the Sea",
+   ["They burned Atlanta and destroyed crops, railroads, and supplies","They marched from Atlanta to Savannah: the March to the Sea","The goal was total war, destroying the South’s ability and will to fight"]],
+  ["sa11","What happened in the 1864 presidential election, and why did it matter?","the election of 1864",
+   ["Lincoln ran against former General George B. McClellan","Lincoln won by a landslide, with strong support from soldiers","His win meant the Union would keep fighting until victory"]],
+  ["sa12","How did the war end, and what shape was the South in afterward?","the end of the war",
+   ["Lee surrendered to Grant at Appomattox Court House in April 1865","The South was socially and economically destroyed: farms, cities, and railroads were in ruins","Slavery was ended (13th Amendment, 1865)"]]
+];
+
+/* ---------- State ---------- */
+var KEY = "cw-u3-study-v1";
+var S = {inputs:{}, done:{}, tries:{}, sorts:{}, order:null, vocab:{}, sa:{}};
+try {
+  var raw = localStorage.getItem(KEY);
+  if (raw) { var p = JSON.parse(raw); for (var k in S) { if (p && p[k] != null) S[k] = p[k]; } }
+} catch (e) {}
+if (!Array.isArray(S.order) || S.order.length !== 10) S.order = TL_START.slice();
+var saveTimer;
+function save(){ clearTimeout(saveTimer); saveTimer = setTimeout(function(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }, 250); }
+
+/* ---------- Helpers ---------- */
+function $(s, el){ return (el || document).querySelector(s); }
+function $$(s, el){ return Array.prototype.slice.call((el || document).querySelectorAll(s)); }
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); }
+function norm(s){
+  return String(s || "").toLowerCase().replace(/[’'`.]/g, "").replace(/[^a-z0-9]+/g, " ")
+    .replace(/\b(the|a|an)\b/g, " ").replace(/\s+/g, " ").trim();
+}
+function matches(v, opts){
+  var n = norm(v); if (!n) return false;
+  return opts.some(function(o){ var m = norm(o); return n === m || n === m + "s" || n + "s" === m; });
+}
+function words(t){ return String(t || "").trim().split(/\s+/).filter(Boolean).length; }
+var ITEMS = {};
+function reg(id, section){ ITEMS[id] = section; }
+var NOTE_ICON = '<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="1.5" width="10" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 5h4.5M6 8h4.5M6 11h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
+function noteHint(t){ return '<p class="notes">' + NOTE_ICON + '<span>Check your notes on ' + esc(t) + '</span></p>'; }
+var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function blanks(text, prefix, section){
+  var i = 0;
+  return esc(text).replace(/\[\[(.+?)\]\]/g, function(m, inner){
+    var opts = inner.split("|");
+    var id = prefix + "-" + (i++);
+    reg(id, section);
+    var w = Math.max(opts[0].length + 3, 6);
+    var val = S.inputs[id] || "";
+    var cls = "blank" + (S.done[id] ? " ok" : "");
+    var showHint = !S.done[id] && (S.tries[id] || 0) >= 2;
+    return '<span class="blank-wrap"><input class="' + cls + '" type="text" data-id="' + id + '" data-ans="' + opts.join("|") +
+      '" value="' + esc(val) + '" style="width:' + w + 'ch" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Fill in the blank">' +
+      '<span class="hint"' + (showHint ? "" : " hidden") + '>' + (showHint ? hintText(opts) : "") + '</span></span>';
+  });
+}
+function hintText(opts){ return "Starts with “" + opts[0].charAt(0).toUpperCase() + "”"; }
+
+/* ---------- Render: concepts ---------- */
+$("#concepts-body").innerHTML = CONCEPTS.map(function(c){
+  return '<div class="panel"><h3>' + esc(c.title) + '</h3>' + noteHint(c.notes) +
+    '<ul class="fill-list">' + c.items.map(function(t, i){ return '<li>' + blanks(t, c.id + "-" + i, "concepts") + '</li>'; }).join("") + '</ul>' +
+    '<div class="actions"><button class="btn" data-action="check-blanks">Check answers</button><p class="status" role="status" aria-live="polite"></p></div></div>';
+}).join("");
+
+$$(".notes-slot").forEach(function(el){ el.outerHTML = noteHint(el.getAttribute("data-notes")); });
+
+/* ---------- Render: chain + map ---------- */
+$("#chain").innerHTML = CHAIN.map(function(t, i){ return '<li>' + blanks(t, "ch-" + i, "diagrams") + '</li>'; }).join("");
+$("#maplist").innerHTML = MAP.map(function(t, i){ return '<li><span class="num" aria-hidden="true">' + (i + 1) + '</span><span><span class="sr">Number ' + (i + 1) + ': </span>' + blanks(t, "map-" + i, "diagrams") + '</span></li>'; }).join("");
+
+/* ---------- Render: vocab ---------- */
+function renderVocab(){
+  $("#vocab-body").innerHTML = VOCAB.map(function(v){
+    var st = S.vocab[v[0]] || {};
+    var w = words(st.text);
+    return '<div class="vcard' + (st.status === "got" ? " got" : "") + '" data-v="' + v[0] + '">' +
+      '<h3>' + esc(v[1]) + '</h3>' +
+      '<label class="sr" for="vt-' + v[0] + '">Your definition of ' + esc(v[1]) + '</label>' +
+      '<textarea id="vt-' + v[0] + '" data-vtext="' + v[0] + '" placeholder="Your definition, from your notes">' + esc(st.text || "") + '</textarea>' +
+      (st.revealed ? '' : '<button class="btn ghost" data-action="vocab-compare"' + (w < 3 ? " disabled" : "") + '>Compare with the definition</button>') +
+      (st.revealed ? '<p class="def">' + esc(v[2]) + '</p><div class="self" role="group" aria-label="How did you do?">' +
+        '<button class="chip-btn got" data-action="vocab-got" aria-pressed="' + (st.status === "got") + '">I had it</button>' +
+        '<button class="chip-btn review" data-action="vocab-review" aria-pressed="' + (st.status === "review") + '">Review again</button></div>' : '') +
+      '</div>';
+  }).join("");
+}
+
+/* ---------- Render: timeline ---------- */
+var tlBad = {};
+var UP = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 10l5-5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+var DOWN = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function tlOk(pos, id){ if (pos === 6 || pos === 7) return id === "gettysburg" || id === "vicksburg"; return TL_CORRECT[pos] === id; }
+function tlAllDone(){ for (var i = 0; i < 10; i++) if (!S.done["tl-" + i]) return false; return true; }
+function renderTL(focus){
+  var all = tlAllDone();
+  $("#tl").innerHTML = S.order.map(function(id, i){
+    var ev = EVENTS[id];
+    var cls = S.done["tl-" + i] ? "ok" : (tlBad[i] ? "bad" : "");
+    return '<li class="' + cls + '"><span class="pos">' + (i + 1) + '</span><span class="ev">' + esc(ev.t) +
+      (all ? '<span class="date">' + esc(ev.d) + '</span>' : '') + '</span><span class="mv">' +
+      '<button class="icon-btn" data-action="tl-up" data-i="' + i + '" aria-label="Move ' + esc(ev.t) + ' earlier"' + (i === 0 ? " disabled" : "") + '>' + UP + '</button>' +
+      '<button class="icon-btn" data-action="tl-down" data-i="' + i + '" aria-label="Move ' + esc(ev.t) + ' later"' + (i === 9 ? " disabled" : "") + '>' + DOWN + '</button>' +
+      '</span></li>';
+  }).join("");
+  $("#tl-after").hidden = !all;
+  if (focus) { var b = $('#tl [data-action="' + focus[0] + '"][data-i="' + focus[1] + '"]'); if (b && !b.disabled) b.focus(); else { b = $('#tl [data-i="' + focus[1] + '"]:not([disabled])'); if (b) b.focus(); } }
+}
+/* ---------- Render: sorting ---------- */
+var SORT_BY_ID = {};
+var sortBad = {};
+var sel = null;
+SORTS.forEach(function(g){
+  SORT_BY_ID[g.id] = g;
+  if (!S.sorts[g.id]) S.sorts[g.id] = {};
+  g.cards.forEach(function(c){ reg(g.id + "-" + c.id, "diagrams"); });
+  $('.sort[data-group="' + g.id + '"]').innerHTML =
+    '<div class="zone sort-bank" data-zone="bank"><button type="button" class="zone-head">Cards to sort <span class="place">Put the card back here</span></button><div class="cards"></div></div>' +
+    '<div class="boxes">' + g.boxes.map(function(b){
+      return '<div class="zone box tone-' + b.tone + '" data-zone="' + b.id + '"><button type="button" class="zone-head">' + esc(b.label) + ' <span class="place">Place here</span></button><div class="cards"></div></div>';
+    }).join("") + '</div>' +
+    '<div class="actions"><button class="btn" data-action="check-sort">Check placements</button><p class="status" role="status" aria-live="polite"></p></div>' +
+    '<p class="after" hidden>' + esc(g.after) + '</p>';
+  renderSort(g);
+});
+function sortAllDone(g){ return g.cards.every(function(c){ return S.done[g.id + "-" + c.id]; }); }
+function renderSort(g){
+  var root = $('.sort[data-group="' + g.id + '"]');
+  var place = S.sorts[g.id];
+  $$(".cards", root).forEach(function(c){ c.innerHTML = ""; });
+  g.cards.forEach(function(c){
+    var zone = place[c.id] || "bank";
+    var did = g.id + "-" + c.id;
+    var cls = "card" + (S.done[did] ? " ok" : (sortBad[did] ? " bad" : ""));
+    var pressed = !!(sel && sel.group === g.id && sel.card === c.id);
+    var target = $('.zone[data-zone="' + zone + '"] .cards', root) || $('.zone[data-zone="bank"] .cards', root);
+    target.insertAdjacentHTML("beforeend", '<button type="button" class="' + cls + '" data-card="' + c.id + '" aria-pressed="' + pressed + '">' + esc(c.text) + '</button>');
+  });
+  root.classList.toggle("has-sel", !!(sel && sel.group === g.id));
+  $(".after", root).hidden = !sortAllDone(g);
+}
+
+/* ---------- Emancipation map sort ---------- */
+var EP_ZONE_NAME = {freed:"Freed", not:"Not Freed"};
+if (!S.sorts.ep) S.sorts.ep = {};
+EP_CARDS.forEach(function(c){ reg("ep-" + c.id, "diagrams"); });
+var epSel = null, epBad = {}, epDrag = null, epLastDrag = 0, epPt = null, epScrollRAF = 0;
+function epAutoScroll(){
+  if (!epDrag || !epDrag.moved || !epPt) { epScrollRAF = 0; return; }
+  var top = 130, bot = window.innerHeight - 60, dy = 0;
+  if (epPt.y < top) dy = -Math.min(18, (top - epPt.y) / 4 + 4);
+  else if (epPt.y > bot) dy = Math.min(18, (epPt.y - bot) / 4 + 4);
+  if (dy) {
+    window.scrollBy(0, dy);
+    var z = epZoneAt(epPt.x, epPt.y);
+    $$(".ep-zone").forEach(function(el){ el.classList.toggle("over", el === z); });
+  }
+  epScrollRAF = requestAnimationFrame(epAutoScroll);
+}
+function epText(id){ for (var i = 0; i < EP_CARDS.length; i++) if (EP_CARDS[i].id === id) return EP_CARDS[i].text; return ""; }
+function renderEP(){
+  var place = S.sorts.ep;
+  EP_CARDS.forEach(function(c){
+    var g = $('#epmap [data-ep="' + c.id + '"]'); if (!g) return;
+    var z = place[c.id], did = "ep-" + c.id;
+    g.setAttribute("class", "ep-st" + (z ? " z-" + z : "") + (S.done[did] ? " ok" : (epBad[did] ? " bad" : "")) + (epSel === c.id ? " sel" : ""));
+    g.setAttribute("aria-label", c.text + (z ? ", placed in " + EP_ZONE_NAME[z] : ", not sorted yet"));
+    g.setAttribute("aria-pressed", epSel === c.id ? "true" : "false");
+  });
+  Object.keys(EP_ZONE_NAME).forEach(function(zid){
+    var box = $('.ep-zone[data-zone="' + zid + '"] .cards');
+    var html = EP_CARDS.filter(function(c){ return place[c.id] === zid; }).map(function(c){
+      var did = "ep-" + c.id;
+      return '<button type="button" class="ep-chip' + (S.done[did] ? " ok" : (epBad[did] ? " bad" : "")) + '" data-ep="' + c.id + '" aria-pressed="' + (epSel === c.id) + '">' + esc(c.text) + '</button>';
+    }).join("");
+    box.innerHTML = html || '<span class="ep-empty">Drag states here</span>';
+  });
+  var n = EP_CARDS.filter(function(c){ return place[c.id]; }).length;
+  $("#ep-count").textContent = n + " of " + EP_CARDS.length + " sorted";
+  $("#ep-panel").classList.toggle("has-sel", !!epSel);
+  $("#ep-after").hidden = !EP_CARDS.every(function(c){ return S.done["ep-" + c.id]; });
+}
+function epPlace(id, zid){
+  S.sorts.ep[id] = zid; S.done["ep-" + id] = false; delete epBad["ep-" + id];
+  epSel = null;
+  var st = $("#ep-status"); st.textContent = ""; st.className = "status";
+  renderEP(); save(); updateProgress();
+}
+function epSelect(id, fromChip){
+  epSel = epSel === id ? null : id;
+  renderEP();
+  if (fromChip) { var c = $('.ep-chip[data-ep="' + id + '"]'); if (c) c.focus(); }
+}
+function checkEP(){
+  var place = S.sorts.ep, right = 0, unplaced = 0;
+  EP_CARDS.forEach(function(c){
+    var did = "ep-" + c.id, z = place[c.id];
+    if (!z) { S.done[did] = false; delete epBad[did]; unplaced++; return; }
+    if (z === c.box) { S.done[did] = true; delete epBad[did]; right++; } else { S.done[did] = false; epBad[did] = true; }
+  });
+  epSel = null; renderEP();
+  var st = $("#ep-status"), wr = EP_CARDS.length - right - unplaced;
+  if (right === EP_CARDS.length) { st.textContent = "All correct. Nice work."; st.className = "status good"; }
+  else { st.textContent = right + " of " + EP_CARDS.length + " in the right place." + (unplaced ? " " + unplaced + " still to sort." : "") + (wr ? " Move the red ones." : ""); st.className = "status"; }
+  save(); updateProgress();
+}
+function epZoneAt(x, y){ var el = document.elementFromPoint(x, y); return el ? el.closest(".ep-zone") : null; }
+document.addEventListener("pointerdown", function(e){
+  var t = e.target.closest && e.target.closest("[data-ep]");
+  if (!t || (e.pointerType === "mouse" && e.button !== 0)) return;
+  epDrag = {id: t.getAttribute("data-ep"), x: e.clientX, y: e.clientY, moved: false, ghost: null};
+});
+document.addEventListener("pointermove", function(e){
+  if (!epDrag) return;
+  if (!epDrag.moved) {
+    if (Math.abs(e.clientX - epDrag.x) + Math.abs(e.clientY - epDrag.y) < 6) return;
+    epDrag.moved = true;
+    var gh = document.createElement("div"); gh.className = "ep-ghost"; gh.textContent = epText(epDrag.id);
+    document.body.appendChild(gh); epDrag.ghost = gh;
+    document.body.classList.add("ep-dragging");
+    var src = $('#epmap [data-ep="' + epDrag.id + '"]'); if (src) src.classList.add("dragging");
+  }
+  e.preventDefault();
+  epPt = {x: e.clientX, y: e.clientY};
+  if (!epScrollRAF) epScrollRAF = requestAnimationFrame(epAutoScroll);
+  epDrag.ghost.style.transform = "translate(" + e.clientX + "px," + e.clientY + "px) translate(-50%,-130%)";
+  var z = epZoneAt(e.clientX, e.clientY);
+  $$(".ep-zone").forEach(function(el){ el.classList.toggle("over", el === z); });
+}, {passive: false});
+function epEnd(e, cancel){
+  if (!epDrag) return;
+  var d = epDrag; epDrag = null;
+  if (!d.moved) return;
+  if (epScrollRAF) { cancelAnimationFrame(epScrollRAF); epScrollRAF = 0; }
+  epPt = null;
+  d.ghost.remove(); document.body.classList.remove("ep-dragging");
+  $$(".ep-zone").forEach(function(el){ el.classList.remove("over"); });
+  epLastDrag = Date.now();
+  var z = cancel ? null : epZoneAt(e.clientX, e.clientY);
+  if (z) epPlace(d.id, z.getAttribute("data-zone")); else renderEP();
+}
+document.addEventListener("pointerup", function(e){ epEnd(e, false); });
+document.addEventListener("pointercancel", function(e){ epEnd(e, true); });
+renderEP();
+
+/* ---------- Render: matching ---------- */
+$("#match-body").innerHTML = MATCH.map(function(set){
+  var opts = set.options.slice().sort(function(a, b){ return a.localeCompare(b); });
+  return '<div class="panel" data-match="' + set.id + '"><h3>' + esc(set.title) + '</h3>' + noteHint(set.notes) +
+    '<ul class="match">' + set.rows.map(function(r, i){
+      var id = set.id + "-" + i; reg(id, "matching");
+      var val = S.inputs[id] || "";
+      return '<li class="' + (S.done[id] ? "ok" : "") + '"><span>' + esc(r[0]) + '</span>' +
+        '<select data-mid="' + id + '" data-ans="' + esc(r[1]) + '" aria-label="Match for: ' + esc(r[0]) + '"><option value="">Choose…</option>' +
+        opts.map(function(o){ return '<option' + (o === val ? " selected" : "") + '>' + esc(o) + '</option>'; }).join("") + '</select></li>';
+    }).join("") + '</ul>' +
+    '<div class="actions"><button class="btn" data-action="check-match">Check matches</button><p class="status" role="status" aria-live="polite"></p></div></div>';
+}).join("");
+
+/* ---------- Render: short answer ---------- */
+function saPanel(q, n){
+  var st = S.sa[q[0]] || {};
+  var checks = st.checks || [];
+  var w = words(st.text);
+  var done = !!S.done[q[0]];
+  return '<div class="panel sa' + (done ? " done" : "") + '" data-sa="' + q[0] + '">' +
+    '<h3><span class="qnum">' + n + '.</span>' + esc(q[1]) + '</h3>' + noteHint(q[2]) +
+    '<label class="sr" for="sat-' + q[0] + '">Your answer</label>' +
+    '<textarea id="sat-' + q[0] + '" data-satext="' + q[0] + '" placeholder="Write your answer in 2–4 sentences">' + esc(st.text || "") + '</textarea>' +
+    '<div class="actions"><span class="wc">' + w + (w === 1 ? " word" : " words") + '</span>' +
+    (st.revealed ? '' : '<button class="btn ghost" data-action="sa-reveal"' + (w < 12 ? " disabled" : "") + '>See what a strong answer includes</button>') + '</div>' +
+    (st.revealed ? '<div class="checklist"><p>A strong answer includes:</p>' + q[3].map(function(pt, i){
+      return '<label><input type="checkbox" data-sacheck="' + i + '"' + (checks[i] ? " checked" : "") + '><span>' + esc(pt) + '</span></label>';
+    }).join("") + '<p class="tip">Tick each idea you included. Missing one? Find it in your notes, add it to your answer, then tick it.</p></div>' : '') +
+    '</div>';
+}
+function renderSA(){ $("#sa-body").innerHTML = SA.map(function(q, i){ return saPanel(q, i + 1); }).join(""); }
+/* ---------- Progress ---------- */
+var SECTIONS = ["concepts","diagrams","matching"];
+function updateProgress(){
+  var tot = 0, dn = 0;
+  SECTIONS.forEach(function(sid){
+    var ids = Object.keys(ITEMS).filter(function(k){ return ITEMS[k] === sid; });
+    var d = ids.filter(function(k){ return S.done[k]; }).length;
+    tot += ids.length; dn += d;
+    var tab = $('.tab[data-target="' + sid + '"]');
+    $("small", tab).textContent = d + "/" + ids.length;
+    tab.classList.toggle("complete", ids.length > 0 && d === ids.length);
+  });
+  var pct = tot ? Math.round(dn / tot * 100) : 0;
+  $("#meter span").style.width = pct + "%";
+  $("#pct").textContent = pct + "% complete";
+}
+updateProgress();
+
+/* ---------- Checking ---------- */
+function setStatus(el, right, total, empty){
+  if (right === total) { el.textContent = "All correct. Nice work."; el.className = "status good"; return; }
+  var wrong = total - right - empty;
+  el.textContent = right + " of " + total + " correct." + (empty ? " " + empty + " still empty." : "") + (wrong ? " Check your notes for the red ones." : "");
+  el.className = "status";
+}
+function checkBlanks(panel){
+  var inputs = $$("input.blank", panel), right = 0, empty = 0;
+  inputs.forEach(function(inp){
+    var id = inp.dataset.id, opts = inp.dataset.ans.split("|"), hint = inp.nextElementSibling;
+    inp.classList.remove("ok", "bad");
+    if (!inp.value.trim()) { S.done[id] = false; empty++; return; }
+    if (matches(inp.value, opts)) {
+      inp.classList.add("ok"); inp.setAttribute("aria-invalid", "false"); S.done[id] = true; right++; hint.hidden = true;
+    } else {
+      inp.classList.add("bad"); inp.setAttribute("aria-invalid", "true"); S.done[id] = false;
+      S.tries[id] = (S.tries[id] || 0) + 1;
+      if (S.tries[id] >= 2) { hint.textContent = hintText(opts); hint.hidden = false; }
+    }
+  });
+  setStatus($(".status", panel), right, inputs.length, empty);
+  save(); updateProgress();
+}
+function checkSort(g, root){
+  var place = S.sorts[g.id], right = 0, unplaced = 0;
+  g.cards.forEach(function(c){
+    var did = g.id + "-" + c.id, z = place[c.id];
+    if (!z || z === "bank") { S.done[did] = false; delete sortBad[did]; unplaced++; return; }
+    if (z === c.box) { S.done[did] = true; delete sortBad[did]; right++; }
+    else { S.done[did] = false; sortBad[did] = true; }
+  });
+  renderSort(g);
+  var st = $(".status", root);
+  if (right === g.cards.length) { st.textContent = "All correct. Nice work."; st.className = "status good"; }
+  else { var wr = g.cards.length - right - unplaced; st.textContent = right + " of " + g.cards.length + " in the right place." + (unplaced ? " " + unplaced + " still to sort." : "") + (wr ? " Move the red ones." : ""); st.className = "status"; }
+  save(); updateProgress();
+}
+function checkTL(){
+  var right = 0; tlBad = {};
+  S.order.forEach(function(id, i){
+    if (tlOk(i, id)) { S.done["tl-" + i] = true; right++; } else { S.done["tl-" + i] = false; tlBad[i] = true; }
+  });
+  renderTL();
+  var st = $("#tl-status");
+  if (right === 10) { st.textContent = "All in order. Nice work."; st.className = "status good"; }
+  else { st.textContent = right + " of 10 in the right spot. Move the red ones."; st.className = "status"; }
+  save(); updateProgress();
+}
+function checkMatch(panel){
+  var sels = $$("select", panel), right = 0, empty = 0;
+  sels.forEach(function(s){
+    var li = s.closest("li"), id = s.dataset.mid;
+    li.classList.remove("ok", "bad");
+    if (!s.value) { S.done[id] = false; empty++; return; }
+    if (s.value === s.dataset.ans) { li.classList.add("ok"); S.done[id] = true; right++; }
+    else { li.classList.add("bad"); S.done[id] = false; }
+  });
+  setStatus($(".status", panel), right, sels.length, empty);
+  save(); updateProgress();
+}
+
+/* ---------- Events ---------- */
+document.addEventListener("click", function(e){
+  var btn = e.target.closest("[data-action]");
+  if (btn) {
+    var a = btn.dataset.action;
+    if (a === "nav") { var target = document.getElementById(btn.dataset.target); if (target) target.scrollIntoView({behavior: reduceMotion ? "auto" : "smooth", block: "start"}); return; }
+    if (a === "check-blanks") { checkBlanks(btn.closest(".panel")); return; }
+    if (a === "check-sort") { var root = btn.closest(".sort"); checkSort(SORT_BY_ID[root.dataset.group], root); return; }
+    if (a === "check-ep") { checkEP(); return; }
+    if (a === "check-tl") { checkTL(); return; }
+    if (a === "check-match") { checkMatch(btn.closest(".panel")); return; }
+    if (a === "tl-up" || a === "tl-down") {
+      var i = +btn.dataset.i, j = a === "tl-up" ? i - 1 : i + 1;
+      if (j < 0 || j > 9) return;
+      var tmp = S.order[i]; S.order[i] = S.order[j]; S.order[j] = tmp;
+      [i, j].forEach(function(k){ S.done["tl-" + k] = false; delete tlBad[k]; });
+      $("#tl-status").textContent = ""; $("#tl-status").className = "status";
+      renderTL([a, j]); save(); updateProgress(); return;
+    }
+    if (a === "vocab-compare" || a === "vocab-got" || a === "vocab-review") {
+      var vid = btn.closest(".vcard").dataset.v;
+      var vs = S.vocab[vid] || (S.vocab[vid] = {});
+      if (a === "vocab-compare") vs.revealed = true;
+      if (a === "vocab-got") vs.status = vs.status === "got" ? null : "got";
+      if (a === "vocab-review") vs.status = vs.status === "review" ? null : "review";
+      S.done["v-" + vid] = vs.status === "got";
+      renderVocab();
+      var again = $('.vcard[data-v="' + vid + '"] ' + (a === "vocab-compare" ? ".chip-btn.got" : '[data-action="' + a + '"]'));
+      if (again) again.focus();
+      save(); updateProgress(); return;
+    }
+    if (a === "sa-reveal") {
+      var sid = btn.closest(".panel").dataset.sa;
+      var ss = S.sa[sid] || (S.sa[sid] = {});
+      ss.revealed = true; ss.checks = ss.checks || [];
+      var q = SA.filter(function(x){ return x[0] === sid; })[0];
+      var panel = btn.closest(".panel");
+      var tmpEl = document.createElement("div"); tmpEl.innerHTML = saPanel(q, $(".qnum", panel).textContent.replace(".", ""));
+      panel.replaceWith(tmpEl.firstChild);
+      var first = $('.panel[data-sa="' + sid + '"] input[type="checkbox"]'); if (first) first.focus();
+      save(); return;
+    }
+  }
+  var epEl = e.target.closest("[data-ep]");
+  if (epEl) { if (Date.now() - epLastDrag < 150) return; epSelect(epEl.getAttribute("data-ep"), epEl.classList.contains("ep-chip")); return; }
+  var epZone = e.target.closest(".ep-zone");
+  if (epZone) { if (epSel && Date.now() - epLastDrag > 150) epPlace(epSel, epZone.getAttribute("data-zone")); return; }
+  var card = e.target.closest(".card");
+  if (card) {
+    var r = card.closest(".sort"), gid = r.dataset.group, cid = card.dataset.card;
+    sel = (sel && sel.group === gid && sel.card === cid) ? null : {group: gid, card: cid};
+    SORTS.forEach(renderSort);
+    var again2 = $('.sort[data-group="' + gid + '"] .card[data-card="' + cid + '"]'); if (again2) again2.focus();
+    return;
+  }
+  var zone = e.target.closest(".zone");
+  if (zone && sel) {
+    var zr = zone.closest(".sort");
+    if (zr.dataset.group !== sel.group) return;
+    var g = SORT_BY_ID[sel.group], moved = sel.card, did = g.id + "-" + moved;
+    S.sorts[g.id][moved] = zone.dataset.zone;
+    S.done[did] = false; delete sortBad[did];
+    sel = null;
+    renderSort(g);
+    var st = $(".status", zr); st.textContent = ""; st.className = "status";
+    var mv = $('.sort[data-group="' + g.id + '"] .card[data-card="' + moved + '"]'); if (mv) mv.focus();
+    save(); updateProgress();
+  }
+});
+
+document.addEventListener("keydown", function(e){
+  var epKey = e.target.closest && e.target.closest("#epmap [data-ep]");
+  if (epKey && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); epSelect(epKey.getAttribute("data-ep"), false); return; }
+  if (e.key === "Escape" && epSel) { epSel = null; renderEP(); }
+  if (e.key === "Escape" && sel) { sel = null; SORTS.forEach(renderSort); }
+  if (e.key === "Enter" && e.target.matches && e.target.matches("input.blank")) {
+    e.preventDefault(); var pnl = e.target.closest(".panel"); if (pnl) checkBlanks(pnl);
+  }
+});
+
+document.addEventListener("input", function(e){
+  var el = e.target;
+  if (el.matches("input.blank")) {
+    var id = el.dataset.id;
+    S.inputs[id] = el.value;
+    if (el.classList.contains("ok") || el.classList.contains("bad")) { el.classList.remove("ok", "bad"); el.removeAttribute("aria-invalid"); }
+    if (S.done[id]) { S.done[id] = false; updateProgress(); }
+    save(); return;
+  }
+  if (el.dataset && el.dataset.vtext) {
+    var vid = el.dataset.vtext, vs = S.vocab[vid] || (S.vocab[vid] = {});
+    vs.text = el.value;
+    var b = $('[data-action="vocab-compare"]', el.closest(".vcard")); if (b) b.disabled = words(el.value) < 3;
+    save(); return;
+  }
+  if (el.dataset && el.dataset.satext) {
+    var sid = el.dataset.satext, ss = S.sa[sid] || (S.sa[sid] = {});
+    ss.text = el.value;
+    var pnl = el.closest(".panel"), w = words(el.value);
+    $(".wc", pnl).textContent = w + (w === 1 ? " word" : " words");
+    var rb = $('[data-action="sa-reveal"]', pnl); if (rb) rb.disabled = w < 12;
+    save(); return;
+  }
+});
+
+document.addEventListener("change", function(e){
+  var el = e.target;
+  if (el.matches("select[data-mid]")) {
+    var id = el.dataset.mid; S.inputs[id] = el.value; S.done[id] = false;
+    el.closest("li").classList.remove("ok", "bad");
+    save(); updateProgress(); return;
+  }
+  if (el.matches("input[data-sacheck]")) {
+    var pnl = el.closest(".panel"), sid = pnl.dataset.sa, ss = S.sa[sid] || (S.sa[sid] = {});
+    ss.checks = ss.checks || [];
+    ss.checks[+el.dataset.sacheck] = el.checked;
+    var q = SA.filter(function(x){ return x[0] === sid; })[0];
+    var all = q[3].every(function(_, i){ return ss.checks[i]; });
+    S.done[sid] = all; pnl.classList.toggle("done", all);
+    save(); updateProgress();
+  }
+});
+
+/* ---------- Reset ---------- */
+var resetBtn = $("#reset"), armTimer;
+resetBtn.addEventListener("click", function(){
+  if (!resetBtn.classList.contains("armed")) {
+    resetBtn.classList.add("armed"); resetBtn.textContent = "Tap again to erase everything";
+    armTimer = setTimeout(function(){ resetBtn.classList.remove("armed"); resetBtn.textContent = "Erase all my answers"; }, 4000);
+    return;
+  }
+  clearTimeout(armTimer);
+  try { localStorage.removeItem(KEY); } catch (e) {}
+  location.reload();
+});
+})();
+</script>
+</body>
+</html>
